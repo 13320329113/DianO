@@ -1,0 +1,423 @@
+<!doctype html>
+<html>
+
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+		<meta name="viewport" content="width=device-width,initial-scale=1,minimum-scale=1,maximum-scale=1,user-scalable=no" />
+		<link href="css/mui.min.css" rel="stylesheet" />
+		<style type="text/css">
+			html,body{
+				width: 100%;
+				height: 100%;
+				position: relative;
+			}
+			.mui-content{
+				width: 96%;
+				position: absolute;
+				left: 2%;
+				
+			}
+			#hsubmit{
+				background-color: #8B4513;
+				border: solid 1px #8B4513;
+				width: 100px;
+				height: 40px;
+				position: absolute;
+				right: 10px;
+				bottom: 20px;
+			}
+			form{
+				padding-bottom: 60px;
+			}
+			
+			@keyframes myfirst{
+				from{ 
+					background-color: lightgreen;
+				}
+				to{
+					background-color: lightblue;
+				}
+			}
+			.box1{
+				width: auto;
+				height: 34px;
+				margin-top: 10px;
+				margin-bottom: 10px;
+				
+			}
+			
+			.box3{
+				
+				width: auto;
+				height: 200px;
+				/*margin-left: 10px;
+				margin-right: 10px;*/
+				margin: 10px 10px 10px 10px;
+				/*background-color: cornflowerblue;*/
+				border-radius: 20px;
+			}
+			
+			input[type=search] {
+			    font-size: 16px;
+			    -webkit-box-sizing: border-box;
+			    box-sizing: border-box;
+			    height: 34px;
+			    text-align: center;
+			    margin-bottom: 5px;
+			    border-radius: 10px;
+			    /*background-color: rgba(0,0,0,.0.1);*/
+			}
+			#a1{
+				width: 20px;
+				height: 20px;
+				background-color: #000000;
+			}
+			#a2{
+				
+				width: 60px;
+				height: 60px;
+				/*background-color:peachpuff;*/
+				margin-left: 10px;
+				margin-bottom: 8px;
+				float: left;
+				border-radius: 10px;
+				position: relative;
+			}
+			#a2 img{
+				width: 60px;
+				height: 60px;
+				position: absolute;
+				border-radius: 10px;
+			}
+			#a3{
+				width: 120px;
+				height: 200px;
+				background-color: goldenrod;
+				float: left;
+			}
+			.mui-slider-item img {
+                width: 300px;
+                height: 200px!important;
+                border-radius: 20px!important;
+                
+            }
+            .dkk{
+                
+            	
+            	width: 96%;
+            	height: 60px;
+            	border-radius: 10px;
+            	margin-left: 2%;
+            	margin-right: 2%;
+            	position: relative;
+            	
+            }
+            
+            .zjl{
+            	background-image: linear-gradient(to bottom,orange,yellow);
+            	width: 40%;
+            	height: 60px;
+            	border-radius: 10px;
+            	margin-left: 10px;
+            	float:left;
+            	text-align: center;
+            	line-height: 60px;
+            	font-size: 20px;
+            }
+			
+			.zjl:hover{
+				box-shadow: 0 0 13px;
+			}
+			
+			.zjr{
+				float:left;
+            	background-image: linear-gradient(to bottom,orange,yellow);
+            	width: 40%;
+            	height: 60px;
+            	border-radius: 10px;
+            	margin-left: 45px;
+            	text-align: center;
+            	line-height: 60px;
+            	font-size: 20px;
+            }
+            
+            .zjr:hover{
+            	box-shadow: 0 0 13px;
+            }
+            
+            .zjl:hover{
+            	box-shadow: 0 0 13px;
+            }
+            
+            .tijiao{
+            	display: block;
+            	margin-left: 300px;
+            	margin-bottom: 20px;
+            }
+            .fanhui{
+				background-color: ghostwhite;
+				height: 30px;
+				width: 350px;
+				margin: auto;
+				border-radius: 10px;
+				font-size: 13px;
+				border: solid 1px gainsboro;
+				color: black;
+			}
+			.fanhui:hover{
+				box-shadow: 0 0 13px;
+				
+			}
+            span{
+				color: black;
+			}
+			#hsubmit{
+				background-color: #8B4513;
+				border: solid 1px #8B4513;
+				width: 100px;
+				height: 40px;
+			}
+		</style>
+	</head>
+  <a href="find.html">
+	 <span  class="mui-icon mui-icon-arrowleft tb"></span>
+	</a>
+	<body>
+		 <!--<nav class="mui-bar mui-bar-tab">
+	        <a class="mui-tab-item mui-active">
+	            <span class="mui-icon mui-icon-home"></span>
+	            <span class="mui-tab-label">首页</span>
+	        </a>
+	        <a class="mui-tab-item">
+	            <span class="mui-icon mui-icon-more"></span>
+	            <span class="mui-tab-label">发现</span>
+	        </a>
+	        
+	        <a class="mui-tab-item">
+	            <span class="mui-icon mui-icon-chatboxes"></span>
+	            <span class="mui-tab-label">消息</span>
+	        </a>
+	        
+	        <a class="mui-tab-item">
+	            <span class="mui-icon mui-icon-gear"></span>
+	            <span class="mui-tab-label">我的</span>
+	        </a>
+	    </nav>-->
+    <div class="mui-content">
+    	
+       
+        
+		
+		
+		<div class="box3">
+			<div id="slider" class="mui-slider">
+				<div class="mui-slider-group mui-slider-loop">
+					<!-- 额外增加的一个节点(循环轮播：第一个节点是最后一张轮播) -->
+					<div class="mui-slider-item mui-slider-item-duplicate">
+						
+					</div>
+					<div class="mui-slider-item">
+						<a href="#">
+							<img src="img/kpl.jpg"/>
+						</a>
+					</div>
+					<div class="mui-slider-item">
+						<a href="#">
+							<img src="img/kpl2.jpg"/>
+							
+						</a>
+					</div>
+					<div class="mui-slider-item">
+						<a href="#">
+							<img src="img/LPL.jpg"/>
+							
+						</a>
+					</div>
+					<div class="mui-slider-item">
+						<a href="#">
+							<img src="img/LPL2.jpg"/>
+							
+						</a>
+					</div>
+					
+					
+					<!-- 额外增加的一个节点(循环轮播：最后一个节点是第一张轮播) -->
+					<div class="mui-slider-item mui-slider-item-duplicate">
+						<a href="#">
+							<img src="img/wzry3.jpg"/>
+							<!---->
+						</a>
+					</div>
+				</div>
+				
+			</div>
+		</div>
+		<form action="" method="post">
+			您的姓名：<input type="text" name="" id="hname" value="" placeholder="必填："/><br/>
+			联系电话：<input type="text" name="" id="htel" value=""  placeholder="必填："/>
+			
+			<!--
+				单选和多选 都会有几个备选项  
+				要把相同类型的备选项 分成一组  
+				分组的依据就是name属性 name属性相同的就是一组
+			-->
+			<hr/>
+			性别：<br/>
+			男<input type="radio" name="sex" id="sex1" value="男" checked="checked" />
+			女<input type="radio" name="sex" id="sex2" value="女" />
+			<hr/>
+			
+			
+			
+			王者荣耀校园赛报名： 
+			<input type="text" name="" id="haddress" value=""  placeholder="所在大学："/>
+			iOS手机平台<input type="radio" name="hobby" value="iOS手机平台" checked="checked"/><br />  
+			安卓手机平台<input type="radio" name="hobby" value="安卓手机平台"/> <br /> 
+			
+			 
+			
+			<hr/>
+			上传图片：<input type="file" name="" id="hfile" value="" />
+			<hr/>
+			参赛项目：<br/>
+			<select name="grade" id="hprojest">
+				<option value="a">KPL职业海选</option>
+				<option value="b">王者校园赛</option>
+				<option value="c">LPL职业海选</option>
+				<option value="d">游戏主播招聘</option>
+				<option value="d">其它参赛项目请留言</option>
+			</select>
+			<hr>
+			留言：
+			<textarea name="" rows="10" cols="60" id="htext"></textarea>
+			
+			<input type="submit" value="提交" class="tijiao" id="hsubmit"/>
+		</form>
+		
+		<!--<div class="dkk">
+			<a href="paihang.html"><div class="zjl">排行榜</div></a>
+		<a href="find.html"><div class="zjr">发现</div></a>
+		<div class="xikk">
+			<div class="xizi">
+			热门
+		</div>
+		<div class="xizi">
+			热门
+		</div>
+		<div class="xizi">
+			热门
+		</div>
+		<div class="xizi">
+			热门
+		</div>
+		</div>
+		
+		</div>
+		
+		<div class="dibuk">
+			<img src="img/wzry3.jpg"/>
+		</div>
+		<div class="dibuk">
+			<img src="img/lol.jpg"/>
+		</div>
+		<div class="dibuk">
+			<img src="img/huowu.jpg"/>
+		</div>
+		<div class="dibuk">
+			<img src="img/CJ2.jpg"/>
+		</div>
+		<div class="dibuk aa">
+			<img src="img/CJ2.jpg"/>
+		</div>
+		<div class="dibuk aa">
+			<img src="img/monizhan.jpg"/>
+		</div>-->
+		
+		
+		
+		<script src="js/mui.min.js"></script>
+		<script type="text/javascript">
+		var gallery = mui('.mui-slider');
+        gallery.slider({
+        interval:3000//自动轮播周期，若为0则不自动播放，默认为0；
+        });
+
+
+
+
+            mui.init();
+            
+            
+            
+            
+            
+			document.getElementById("hsubmit").addEventListener("tap",function(){
+					var vhname=document.getElementById("hname").value;
+					var vhtel=document.getElementById("htel").value;
+					var vhaddress=document.getElementById("haddress").value;
+					var vhfile=document.getElementById("hfile").value;
+					var vhprojest=document.getElementById("hprojest").value;
+					var vhtext=document.getElementById("htext").value;
+					
+					
+					var sex;
+					var sexlist=document.getElementsByName("sex");
+					for(var i=0;i<sexlist.length;i++)
+					{
+						
+						 var flag=sexlist[i].checked;
+						 if(flag)
+						 {
+						 	sex=sexlist[i].value;
+						 }	
+					}
+					console.log(sex);
+					
+					 
+					 
+					 
+					 
+					var hobby;
+					var hobbylist=document.getElementsByName("hobby");
+					for(var i=0;i<hobbylist.length;i++)
+					{
+						
+						 var flag=hobbylist[i].checked;
+						 if(flag)
+						 {
+						 	hobby=hobbylist[i].value;
+						 }	
+					}
+					
+					mui.ajax("http://192.168.43.128:8080/myshop/JavaApi",{
+						data:{
+							rnum:"1",
+	                  		sanname:vhname,
+	                  		sannum:vhtel,
+	                  		sansex:sex,
+	                  		sanplatform:hobby,
+	                  		sanaddress:vhaddress,
+	                  		sanfile:vhfile,
+	                  		sanprojest:vhprojest,
+	                  		santext:vhtext		
+						},
+						dataType:'json',//服务器返回json格式数据
+						type:'post',//HTTP请求类型
+						timeout:10000,//超时时间设置为10秒；
+						headers:{'Content-Type':'application/x-www-form-urlencoded'},
+						success:function(data){
+							mui.toast("提交成功!");
+							
+							console.log(JSON.stringify(data));
+						}
+					});
+			});
+
+
+
+
+		</script>
+	</body>
+
+</html>

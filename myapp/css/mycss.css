@@ -1,0 +1,154 @@
+*{
+				margin: 0;
+				padding: 0;
+			}
+			html,body{
+				width: 100%;
+				height: 100%;
+			}
+			
+			#top{
+				width: 100%;
+				height: 26%;
+				background-color: #00BFFF;
+				position: absolute;
+				padding-bottom: 20px;
+				/*background-image: url(image/06.jpg);*/
+				/*background-image: linear-gradient(#00BFFF,white);*/
+			}
+			.ID{
+				width: 150px;
+				color: white;
+				padding-left: 30px;
+			}
+			p{
+				color: white;
+				padding-left: 30px;
+			}
+			.name{
+				/*width: 150px;*/
+				color: white;
+				padding-left: 30px;
+				font-size: 20px;
+				padding-top: 25px;
+			}
+			.left{
+				float: left;
+				width: 150px;
+				/*background-color: aquamarine;*/
+			}
+			.right{
+				width: 60px;
+				height: 60px;
+				/*background-color: white;*/
+				float: right;
+				padding-top: 20px;
+				margin-right: 20px;
+				/*padding-right: 0px;*/
+			}
+			img{
+				border-radius: 10px;
+				width: 60px;
+				height: 60px;
+			}
+			.chakan{
+				width:100% ;
+				float: left;
+				/*background-color: red;
+				position: relative;*/
+				
+			}
+			
+			.chakan li{
+				float: left;
+				list-style: none;
+				/*margin-left: 0px;*/
+				padding-left: 20px;
+				/*padding-right: 10px;*/
+				text-align: center;
+			}
+			/*p{
+				background-color: firebrick;
+			}*/
+			.mokuai{
+				width: 94%;
+				position: relative;
+				left: 3%;
+				height: 65%;
+				background-color: white;
+				float: left;
+				/*padding-top: 50px;*/
+				border-radius: 10px;
+				margin-bottom: 20px;
+				
+			}
+			.xiaokuai{
+				border-radius: 10px;
+				margin-top: 10px;
+				padding-top: 20px;
+				margin-left: 45px;
+				float: left;
+				width: 60px;
+				height: 80px;
+				/*background-color: forestgreen;*/
+				/*background-image: url(image/订单.svg);
+				background-repeat: no-repeat;*/
+			}
+			.tupian{
+				width: 35px;
+				height: 35px;
+				/*margin-top: 5px;*/
+				/*background-color: #1E90FF;*/
+				margin: auto;
+				border-radius: 10px;
+			}
+			.tupian img{
+				
+				width: 30px;
+				height: 30px;
+				margin-left: 3px;
+			}
+			.wenzi{
+				/*background-color: darkblue;*/
+				text-align: center;
+				height: 25px;
+				line-height: 25px;
+				margin-top: 5px;
+				font-size: 13px;
+				color: black;
+			}
+			.gengduo{
+				width: 94%;
+				height: 40%;
+				position: relative;
+				top: 40%;
+				left: 3%;
+				background-color: white;
+				border-radius: 10px;
+			}
+			.pp{
+				padding-top: 20px;
+				font-size: 16px;
+				font-family: "微软雅黑";
+				color: black;
+			}
+			.inner{
+				/*background-color: #007AFF;*/
+				width: 70px;
+				height: 80px;
+				float: left;
+				margin-left: 14px;
+				margin-right: 6px;
+				margin-bottom: 25px;
+				margin-top: 15px;
+				border-radius: 10px;
+			}
+			/*.mui-tab-item{
+				background-color: deepskyblue;
+			}
+			.mui-tab-label{
+				color: white;
+			}
+			.mui-icon{
+				color: white;
+			}*/

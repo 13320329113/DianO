@@ -1,0 +1,790 @@
+<!doctype html>
+<html>
+
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+		<meta name="viewport" content="width=device-width,initial-scale=1,minimum-scale=1,maximum-scale=1,user-scalable=no" />
+		<link href="css/mui.min.css" rel="stylesheet" />
+		<style type="text/css">
+			html body{
+				width: 100%;
+				height: 100%;
+				background-color:  #F9F9F9;
+				overflow-y: scroll;
+			}
+			.mui-pull-left{
+				color: black;
+			}
+			.mui-pull-right{
+				color: black;
+			}
+			P{
+				font-family: "微软雅黑";
+				font-size: 16px;
+				font-weight: 700;
+				text-align: center;
+				letter-spacing: 2px;
+				color: black;
+				height: 30px;
+				background-color: #F9F9F9;
+				line-height: 30px;
+				
+			}
+			.boxone{
+				width: auto;
+				height: 600px;
+			}
+			/*.mui-fullscreen{
+				height: 755px!important;
+			}*/
+			.boxone img{
+				width: 350px;
+				height: 150px;
+				margin-top: 10px;
+				margin-left: 25px;
+				margin-bottom: 20px;
+				border-radius: 20px;
+				float: left;
+			}
+			.mui-scroll-wrapper{
+				background-color: #F9F9F9;
+			}
+			.one{
+				width: 300px;
+				height: 100px;
+				
+			}
+			.aone{
+				height: 25px;
+				text-align: left;
+				margin-top: 5px;
+			/*	background-color: palegreen;*/
+				/*position: relative;*/
+				
+			}
+			
+			.bone{
+				width: 80px;
+				height: 25px;
+				border-radius: 25px;
+				background-color: #EEEEEE;
+				font-size: 13px;
+				text-align: center;
+				line-height: 25px;
+				color: black;
+				margin-top: 10px;
+				margin-left: 5px;
+				float: left;
+				/*position: absolute;*/
+			}
+			.bone a{
+				color: black;
+			}
+			.cone{
+				width: 80px;
+				height: 45px;
+				border-radius: 30px;
+				text-align: center;
+				line-height: 45px;
+				float: left;
+				border: solid cornflowerblue 1px;
+			}
+			.done{
+				width: 150px;
+				height: 45px;
+				border-radius: 30px;
+				text-align: center;
+				line-height: 45px;
+				border: solid cornflowerblue 1px;
+				margin-left: 20px;
+				float: left;
+				/*background-color: cadetblue;*/
+			}
+			.boxtwo{
+				width: 100%;
+				height: 127px;
+				float: left;
+			}
+			.mui-table-view{
+				width: 98%;
+				height: 127px;
+				margin-top: 10px;
+				margin-left: 10px;
+				float: left;
+			}
+			/*.boxthree{
+				width: 100%;
+				height: 40px;
+				/*border: solid 1px;*/
+				margin-top: 0px;
+				position: absolute;
+			}
+			.mui-control-item{
+				width: 100px!important;
+				height: 30px;
+				background-color: #E8E8E8!important;
+				font-size: 13px;
+				color: black!important;
+				border-radius: 40px;
+				line-height: 30px!important;
+				margin-top: 10px;
+				
+			}*/
+			.boxfour{
+				/*margin-top:5px;*/
+				width: 98%;
+				height: 1000px;
+				margin-top: 38px;
+				margin-left: 3px;
+				/*position: absolute;*/
+			}*/
+			.fourone{
+				width: 98%;
+				margin-top: 45px;
+				height: 200px;
+				/*background-color: plum;*/
+			}
+			.fourtwo{
+				width: 80px;
+				height: 80px;
+				margin-left: 5px;
+				border-radius: 10px;
+				float: left;
+			}
+			.fourthree{
+				width: 98%px;
+				height: 25px;
+				margin-bottom: 5px;
+				background-color: blue;
+				/*float: left;*/
+			}
+			#fone{
+				line-height: 25px;
+			}
+			#one-f{
+				color: #000000;
+				font-size: 15px;
+				/*font-weight: 700;*/
+			}
+			#two-f{
+				font-size: 12px;
+				margin-left: 5px;
+			}
+			#two-f a{
+				color: cornflowerblue;
+			}
+			#three-f{
+				font-size: 12px;
+				color: orange;
+				margin-left: 10px;
+			}
+			#four-f{
+				font-size: 12px;
+				color: grey;
+				margin-left: 10px;
+			}
+			#five-f{
+				font-size: 12px;
+				color: grey;
+				margin-left: 80px;
+			}
+			#six-f{
+				font-size: 12px;
+				color: grey;
+				width: 280px;
+				height: 25px;
+				margin-left: 20px;
+				border-radius: 10px;
+				background-color: #E3E3E3;
+			}
+			#seven-f{
+				font-size: 12px;
+				color: grey;
+				margin-left: 110px;
+			}
+			#eight-f{
+				font-size: 16px;
+				color: red;
+			}
+			.mui-media-object mui-pull-left{
+				width: 150px!important;
+				height:150px!important;
+			}
+			.mui-table-view{
+				height:150px!important;
+			}
+			.mui-media-body{
+				font-family: "微软雅黑";
+				font-weight: 700;
+				margin-left: 60px!important;
+			}
+			
+		</style>
+	</head>
+
+	<body>
+		<div class="mui-content">
+			<div class="boxone">
+			<!-- 侧滑导航根容器 -->
+			<div class="mui-off-canvas-wrap mui-draggable">
+			  <!-- 主页面容器 -->
+			  <div class="mui-inner-wrap">
+			     <!-- 菜单容器 -->
+			    <aside class="mui-off-canvas-right">
+			      <div class="mui-scroll-wrapper">
+			        <div class="mui-scroll">
+			          <!-- 菜单具体展示内容 -->
+			          <div class="one">
+			          	<div class="aone">状态</div>
+			          	<div class="bone"><a href="###">在线</a></div>
+			          </div>
+			          <div class="one">
+			          	<div class="aone">大区</div>
+			          	<div class="bone"><a href="###">QQ区</a></div>
+			          	<div class="bone"><a href="###">微信区</a></div>
+			          </div>
+			          <div class="one">
+			          	<div class="aone">段位</div>
+			          	<div class="bone"><a href="###">尊贵铂金</a></div>
+			          	<div class="bone"><a href="###">永恒钻石</a></div>
+			          	<div class="bone"><a href="###">至尊星耀</a></div>
+			          	<div class="bone"><a href="###">最强王者</a></div>
+			          	<div class="bone"><a href="###">荣耀王者</a></div>
+			          </div>
+			          <div class="one">
+			          	<div class="aone">标签/特色</div>
+			          	<div class="bone"><a href="###">金牌推荐</a></div>
+			          	<div class="bone"><a href="###">技术认证</a></div>
+			          	<div class="bone"><a href="###">巅峰王者</a></div>
+			          	<div class="bone"><a href="###">语音连麦</a></div>
+			          	<div class="bone"><a href="###">人皮话多</a></div>
+			          </div>
+			          <div class="one">
+			          	<div class="aone">价格</div>
+			          	<div class="bone"><a href="###">4-9币</a></div>
+			          	<div class="bone"><a href="###">10-19币</a></div>
+			          	<div class="bone"><a href="###">20币以上</a></div>
+			          </div>
+			          <div class="one">
+			          	<div class="aone">位置</div>
+			          	<div class="bone"><a href="###">上路</a></div>
+			          	<div class="bone"><a href="###">打野</a></div>
+			          	<div class="bone"><a href="###">中单</a></div>
+			          	<div class="bone"><a href="###">下路</a></div>
+			          	<div class="bone"><a href="###">辅助</a></div>
+			          </div>
+			          <div class="one">
+			          	<div class="aone">所在地</div>
+			          	<div class="bone"><a href="###">同城</a></div>
+			          </div>
+			          <div class="cone">
+			          	<div id="blink">重置</div>
+			          </div>
+			          <div class="done">
+			          	<div id="blink">确定</div>
+			          </div>
+			        </div>
+			      </div>
+			    </aside>
+			    <!-- 主页面标题 -->
+			    <header class="mui-bar mui-bar-nav">
+			    	<a class="mui-action-back mui-icon mui-icon-left-nav mui-pull-left"></a>
+			      <a class="mui-icon mui-action-menu mui-icon-bars mui-pull-right" id="offCanvasShow"></a>
+			      <h1 class="mui-title">刀塔2</h1>
+			    </header>
+			    <!-- 主页面内容容器 -->
+			    <div class="mui-content mui-scroll-wrapper">
+			      <div class="mui-scroll">
+			        <!-- 主界面具体展示内容 -->
+			        <div><img src="img/zhu.jpg"/></div>
+			        <div><img src="img/done.jpg"></div>
+			        <div><img src="img/dtwo.jpg"></div>
+			        
+			        
+			        
+			        
+			      </div>
+			    </div>  
+			  </div>
+			</div>
+			</div>
+		   
+		  
+			
+			
+	
+		    
+		    <!--<div class="boxthree">
+		    	<div id="slider" class="mui-slider mui-fullscreen">
+				<div id="sliderSegmentedControl" class="mui-scroll-wrapper mui-slider-indicator mui-segmented-control mui-segmented-control-inverted">
+					<div class="mui-scroll">
+						
+						<a class="mui-control-item mui-active" href="#item1mobile">
+							荣耀lol
+						</a>
+						
+						<a class="mui-control-item" href="#item2mobile">
+							技术认证
+						</a>
+						<a class="mui-control-item" href="#item3mobile">
+							20-29币
+						</a>
+						<a class="mui-control-item" href="#item4mobile">
+							打野
+						</a>
+						<a class="mui-control-item" href="#item5mobile">
+							金牌推荐
+						</a>
+						<a class="mui-control-item" href="#item6mobile">
+							辅助
+						</a>
+					</div>
+				</div>
+		        </div>
+		    </div>-->
+		    
+		    <div class="boxfour">
+		    		<div class="fourone">
+			    <div class="fourtwo">
+			    	<a href="dingdan.html"><img src="img/muwu.jpg" style="width: 80px;
+				height: 80px;margin-top: 5px;"/></div></a>
+			<div class="fourthree">
+				<p id="fone">
+					<span id="one-f">bl(百星导师)</span> 
+					<span id="two-f">
+						<a href="###"><img src="img/zungui.png" style="width: 15px;height: 15px; padding-top: 5px;"/> 最强王者</a>
+					</span> 
+				</p>
+			</div>
+			<div class="fourthree">
+				<p id="fone">
+					<span id="three-f">
+						<img src="img/xing.png" style="width: 15px;height: 15px;"/> 5.0 
+					</span> 
+					<span id="four-f">接单量:11</span> 
+					<span id="five-f">
+						<img src="img/yuan.png" style="width: 15px;height: 15px; padding-top: 6px;"/>在线
+					</span> 
+				</p>
+			</div>
+			<div class="fourthree">
+				<p id="fone">
+					<span id="six-f">小姐姐技术很强</span>
+					<span id="seven-f"> 青岛</span>
+				</p>
+			</div>
+			<div class="fourthree">
+				<p id="fone">
+					<span id="eight-f"> 9币/局</span> 
+				</p>
+			</div>
+			<div class="fourone">
+			    <div class="fourtwo">
+			    	<a href="dingdan.html"><img src="img/logo__rainbow.png" style="width: 80px;
+				height: 80px; margin-top: 5px;"/></div></a>
+			<div class="fourthree">
+				<p id="fone">
+					<span id="one-f">bl(百星导师)</span> 
+					<span id="two-f">
+						<a href="###"><img src="img/zungui.png" style="width: 15px;height: 15px;"/> 最强王者</a>
+					</span> 
+				</p>
+			</div>
+			<div class="fourthree">
+				<p id="fone">
+					<span id="three-f">
+						<img src="img/xing.png" style="width: 15px;height: 15px;"/> 5.0 
+					</span> 
+					<span id="four-f">接单量:11</span> 
+					<span id="five-f">
+						<img src="img/yuan.png" style="width: 15px;height: 15px;padding-top: 6px;"/>在线
+					</span> 
+				</p>
+			</div>
+			<div class="fourthree">
+				<p id="fone">
+					<span id="six-f">小姐姐技术很强</span>
+					<span id="seven-f"> 青岛</span>
+				</p>
+			</div>
+			<div class="fourthree">
+				<p id="fone">
+					<span id="eight-f"> 9币/局</span> 
+				</p>
+			</div>
+			<div class="fourone">
+			    <div class="fourtwo">
+			    	<a href="dingdan.html"><img src="img/42 - Lucky Rainbow (Flat).png" style="width: 80px;
+				height: 80px;margin-top: 5px;"/></div></a>
+			<div class="fourthree">
+				<p id="fone">
+					<span id="one-f">bl(百星导师)</span> 
+					<span id="two-f">
+						<a href="###"><img src="img/zungui.png" style="width: 15px;height: 15px;"/> 最强王者</a>
+					</span> 
+				</p>
+			</div>
+			<div class="fourthree">
+				<p id="fone">
+					<span id="three-f">
+						<img src="img/xing.png" style="width: 15px;height: 15px;"/> 5.0 
+					</span> 
+					<span id="four-f">接单量:11</span> 
+					<span id="five-f">
+						<img src="img/yuan.png" style="width: 15px;height: 15px;padding-top: 6px;"/>在线
+					</span> 
+				</p>
+			</div>
+			<div class="fourthree">
+				<p id="fone">
+					<span id="six-f">小姐姐技术很强</span>
+					<span id="seven-f"> 青岛</span>
+				</p>
+			</div>
+			<div class="fourthree">
+				<p id="fone">
+					<span id="eight-f"> 9币/局</span> 
+				</p>
+			</div>
+			<div class="fourone">
+			    <div class="fourtwo">
+			    	<a href="dingdan.html"><img src="img/logo__rainbow.png" style="width: 80px;
+				height: 80px;margin-top: 5px;"/></div></a>
+			<div class="fourthree">
+				<p id="fone">
+					<span id="one-f">bl(百星导师)</span> 
+					<span id="two-f">
+						<a href="###"><img src="img/zungui.png" style="width: 15px;height: 15px;"/> 最强王者</a>
+					</span> 
+				</p>
+			</div>
+			<div class="fourthree">
+				<p id="fone">
+					<span id="three-f">
+						<img src="img/xing.png" style="width: 15px;height: 15px;"/> 5.0 
+					</span> 
+					<span id="four-f">接单量:11</span> 
+					<span id="five-f">
+						<img src="img/yuan.png" style="width: 15px;height: 15px;padding-top: 6px;"/>在线
+					</span> 
+				</p>
+			</div>
+			<div class="fourthree">
+				<p id="fone">
+					<span id="six-f">小姐姐技术很强</span>
+					<span id="seven-f"> 青岛</span>
+				</p>
+			</div>
+			<div class="fourthree">
+				<p id="fone">
+					<span id="eight-f"> 9币/局</span> 
+				</p>
+			</div>
+			<div class="fourone">
+			    <div class="fourtwo">
+			    	<a href="dingdan.html"><img src="img/logo__rainbow.png" style="width: 80px;
+				height: 80px;margin-top: 5px;"/></div></a>
+			<div class="fourthree">
+				<p id="fone">
+					<span id="one-f">bl(百星导师)</span> 
+					<span id="two-f">
+						<a href="###"><img src="img/zungui.png" style="width: 15px;height: 15px;"/> 最强王者</a>
+					</span> 
+				</p>
+			</div>
+			<div class="fourthree">
+				<p id="fone">
+					<span id="three-f">
+						<img src="img/xing.png" style="width: 15px;height: 15px;"/> 5.0 
+					</span> 
+					<span id="four-f">接单量:11</span> 
+					<span id="five-f">
+						<img src="img/yuan.png" style="width: 15px;height: 15px;padding-top: 6px;"/>在线
+					</span> 
+				</p>
+			</div>
+			<div class="fourthree">
+				<p id="fone">
+					<span id="six-f">小姐姐技术很强</span>
+					<span id="seven-f"> 青岛</span>
+				</p>
+			</div>
+			<div class="fourthree">
+				<p id="fone">
+					<span id="eight-f"> 9币/局</span> 
+				</p>
+			</div>
+			<div class="fourone">
+			    <div class="fourtwo">
+			    	<img src="img/logo__rainbow.png" style="width: 80px;
+				height: 80px;margin-top: 5px;"/></div>
+			<div class="fourthree">
+				<p id="fone">
+					<span id="one-f">bl(百星导师)</span> 
+					<span id="two-f">
+						<a href="###"><img src="img/zungui.png" style="width: 15px;height: 15px;"/> 最强王者</a>
+					</span> 
+				</p>
+			</div>
+			<div class="fourthree">
+				<p id="fone">
+					<span id="three-f">
+						<img src="img/xing.png" style="width: 15px;height: 15px;"/> 5.0 
+					</span> 
+					<span id="four-f">接单量:11</span> 
+					<span id="five-f">
+						<img src="img/yuan.png" style="width: 15px;height: 15px;padding-top: 6px;"/>在线
+					</span> 
+				</p>
+			</div>
+			<div class="fourthree">
+				<p id="fone">
+					<span id="six-f">小姐姐技术很强</span>
+					<span id="seven-f"> 青岛</span>
+				</p>
+			</div>
+			<div class="fourthree">
+				<p id="fone">
+					<span id="eight-f"> 9币/局</span> 
+				</p>
+			</div>
+			<div class="fourone">
+			    <div class="fourtwo">
+			    	<img src="img/muwu.jpg" style="width: 80px;
+				height: 80px;margin-top: 5px;"/></div>
+			<div class="fourthree">
+				<p id="fone">
+					<span id="one-f">bl(百星导师)</span> 
+					<span id="two-f">
+						<a href="###"><img src="img/zungui.png" style="width: 15px;height: 15px; padding-top: 5px;"/> 最强王者</a>
+					</span> 
+				</p>
+			</div>
+			<div class="fourthree">
+				<p id="fone">
+					<span id="three-f">
+						<img src="img/xing.png" style="width: 15px;height: 15px;"/> 5.0 
+					</span> 
+					<span id="four-f">接单量:11</span> 
+					<span id="five-f">
+						<img src="img/yuan.png" style="width: 15px;height: 15px; padding-top: 6px;"/>在线
+					</span> 
+				</p>
+			</div>
+			<div class="fourthree">
+				<p id="fone">
+					<span id="six-f">小姐姐技术很强</span>
+					<span id="seven-f"> 青岛</span>
+				</p>
+			</div>
+			<div class="fourthree">
+				<p id="fone">
+					<span id="eight-f"> 9币/局</span> 
+				</p>
+			</div>
+			<div class="fourone">
+			    <div class="fourtwo">
+			    	<img src="img/muwu.jpg" style="width: 80px;
+				height: 80px;margin-top: 5px;"/></div>
+			<div class="fourthree">
+				<p id="fone">
+					<span id="one-f">bl(百星导师)</span> 
+					<span id="two-f">
+						<a href="###"><img src="img/zungui.png" style="width: 15px;height: 15px; padding-top: 5px;"/> 最强王者</a>
+					</span> 
+				</p>
+			</div>
+			<div class="fourthree">
+				<p id="fone">
+					<span id="three-f">
+						<img src="img/xing.png" style="width: 15px;height: 15px;"/> 5.0 
+					</span> 
+					<span id="four-f">接单量:11</span> 
+					<span id="five-f">
+						<img src="img/yuan.png" style="width: 15px;height: 15px; padding-top: 6px;"/>在线
+					</span> 
+				</p>
+			</div>
+			<div class="fourthree">
+				<p id="fone">
+					<span id="six-f">小姐姐技术很强</span>
+					<span id="seven-f"> 青岛</span>
+				</p>
+			</div>
+			<div class="fourthree">
+				<p id="fone">
+					<span id="eight-f"> 9币/局</span> 
+				</p>
+			</div>
+			<div class="fourone">
+			    <div class="fourtwo">
+			    	<img src="img/muwu.jpg" style="width: 80px;
+				height: 80px;margin-top: 5px;"/></div>
+			<div class="fourthree">
+				<p id="fone">
+					<span id="one-f">bl(百星导师)</span> 
+					<span id="two-f">
+						<a href="###"><img src="img/zungui.png" style="width: 15px;height: 15px; padding-top: 5px;"/> 最强王者</a>
+					</span> 
+				</p>
+			</div>
+			<div class="fourthree">
+				<p id="fone">
+					<span id="three-f">
+						<img src="img/xing.png" style="width: 15px;height: 15px;"/> 5.0 
+					</span> 
+					<span id="four-f">接单量:11</span> 
+					<span id="five-f">
+						<img src="img/yuan.png" style="width: 15px;height: 15px; padding-top: 6px;"/>在线
+					</span> 
+				</p>
+			</div>
+			<div class="fourthree">
+				<p id="fone">
+					<span id="six-f">小姐姐技术很强</span>
+					<span id="seven-f"> 青岛</span>
+				</p>
+			</div>
+			<div class="fourthree">
+				<p id="fone">
+					<span id="eight-f"> 9币/局</span> 
+				</p>
+			</div>
+			<div class="fourone">
+			    <div class="fourtwo">
+			    	<img src="img/muwu.jpg" style="width: 80px;
+				height: 80px;margin-top: 5px;"/></div>
+			<div class="fourthree">
+				<p id="fone">
+					<span id="one-f">bl(百星导师)</span> 
+					<span id="two-f">
+						<a href="###"><img src="img/zungui.png" style="width: 15px;height: 15px; padding-top: 5px;"/> 最强王者</a>
+					</span> 
+				</p>
+			</div>
+			<div class="fourthree">
+				<p id="fone">
+					<span id="three-f">
+						<img src="img/xing.png" style="width: 15px;height: 15px;"/> 5.0 
+					</span> 
+					<span id="four-f">接单量:11</span> 
+					<span id="five-f">
+						<img src="img/yuan.png" style="width: 15px;height: 15px; padding-top: 6px;"/>在线
+					</span> 
+				</p>
+			</div>
+			<div class="fourthree">
+				<p id="fone">
+					<span id="six-f">小姐姐技术很强</span>
+					<span id="seven-f"> 青岛</span>
+				</p>
+			</div>
+			<div class="fourthree">
+				<p id="fone">
+					<span id="eight-f"> 9币/局</span> 
+				</p>
+			</div>
+			<div class="fourone">
+			    <div class="fourtwo">
+			    	<img src="img/muwu.jpg" style="width: 80px;
+				height: 80px;margin-top: 5px;"/></div>
+			<div class="fourthree">
+				<p id="fone">
+					<span id="one-f">bl(百星导师)</span> 
+					<span id="two-f">
+						<a href="###"><img src="img/zungui.png" style="width: 15px;height: 15px; padding-top: 5px;"/> 最强王者</a>
+					</span> 
+				</p>
+			</div>
+			<div class="fourthree">
+				<p id="fone">
+					<span id="three-f">
+						<img src="img/xing.png" style="width: 15px;height: 15px;"/> 5.0 
+					</span> 
+					<span id="four-f">接单量:11</span> 
+					<span id="five-f">
+						<img src="img/yuan.png" style="width: 15px;height: 15px; padding-top: 6px;"/>在线
+					</span> 
+				</p>
+			</div>
+			<div class="fourthree">
+				<p id="fone">
+					<span id="six-f">小姐姐技术很强</span>
+					<span id="seven-f"> 青岛</span>
+				</p>
+			</div>
+			<div class="fourthree">
+				<p id="fone">
+					<span id="eight-f"> 9币/局</span> 
+				</p>
+			</div>
+		</div>
+		<!--</div>-->
+		<script src="js/mui.min.js"></script>
+		<script type="text/javascript">
+           mui.init();
+			(function($) {
+				//阻尼系数
+				var deceleration = mui.os.ios?0.003:0.0009;
+				$('.mui-scroll-wrapper').scroll({
+					bounce: false,
+					indicators: true, //是否显示滚动条
+					deceleration:deceleration
+				});
+				$.ready(function() {
+					//循环初始化所有下拉刷新，上拉加载。
+					$.each(document.querySelectorAll('.mui-slider-group .mui-scroll'), function(index, pullRefreshEl) {
+						$(pullRefreshEl).pullToRefresh({
+							down: {
+								callback: function() {
+									var self = this;
+									setTimeout(function() {
+										var ul = self.element.querySelector('.mui-table-view');
+										ul.insertBefore(createFragment(ul, index, 10, true), ul.firstChild);
+										self.endPullDownToRefresh();
+									}, 1000);
+								}
+							},
+							up: {
+								callback: function() {
+									var self = this;
+									setTimeout(function() {
+										var ul = self.element.querySelector('.mui-table-view');
+										ul.appendChild(createFragment(ul, index, 5));
+										self.endPullUpToRefresh();
+									}, 1000);
+								}
+							}
+						});
+					});
+					var createFragment = function(ul, index, count, reverse) {
+						var length = ul.querySelectorAll('li').length;
+						var fragment = document.createDocumentFragment();
+						var li;
+						for (var i = 0; i < count; i++) {
+							li = document.createElement('li');
+							li.className = 'mui-table-view-cell';
+							li.innerHTML = '第' + (index + 1) + '个选项卡子项-' + (length + (reverse ? (count - i) : (i + 1)));
+							fragment.appendChild(li);
+						}
+						return fragment;
+					};
+				});
+			})(mui);
+		
+           document.getElementById('offCanvasShow').addEventListener('tap', function() {
+			 mui('.mui-off-canvas-wrap').offCanvas('show');
+			 });
+			 
+			function changeColor(){ 
+            var color="#f00|#0f0|#00f|#880|#808|#088|yellow|green|blue|gray"; 
+            color=color.split("|"); 
+            document.getElementById("blink").style.color=color[parseInt(Math.random() * color.length)]; 
+	        } 
+	        setInterval("changeColor()",1000)
+	        
+		</script>
+	</body>
+
+</html>

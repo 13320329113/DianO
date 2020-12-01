@@ -1,0 +1,258 @@
+<!doctype html>
+<html lang="en" class="feedback">
+
+	<head>
+		<meta charset="UTF-8" />
+		<meta name="viewport" content="width=device-width,initial-scale=1,minimum-scale=1,maximum-scale=1,user-scalable=no" />
+		<title>问题反馈</title>
+		<link rel="stylesheet" type="text/css" href="css/mui.min.css" />
+		<link rel="stylesheet" type="text/css" href="css/feedback.css" />
+		<style type="text/css">
+			
+			.mui-action-back{
+				color: black;
+			}
+			
+			.mui-title{
+				color: black;
+				
+			}
+			#submit{
+				color: black;
+			}
+			.select-img-box{
+				width: 100%;
+				height: 80px;
+				padding: 5px 0px 0px 10px;
+				/*background-color: red;*/
+			}
+			#addImg{
+				width: 70px;
+				height: 70px;
+				line-height: 70px;
+				text-align: center;
+				border: solid 1px #999;
+				border-radius: 10px;
+				/*background-color: green;*/
+			}
+			#addImg .mui-icon{
+				font-size: 70px;
+				color: #555;
+			}
+			
+			/*图片预览盒子*/
+			#img-view-box{
+				width: 180px;
+				height: 120px;
+				margin-left: 10px;
+				/*background-color: red;*/
+			}
+			#img-view-box img{
+				width: 100%;
+				height: 100%;
+			}
+		</style>
+	</head>
+
+	<body>
+		<header class="mui-bar mui-bar-nav">
+			<a class="mui-action-back mui-icon mui-icon-left-nav mui-pull-left"></a>
+			<button id="submit" class="mui-btn mui-btn-blue mui-btn-link mui-pull-right">发送</button>
+			<h1 class="mui-title">发布动态</h1>
+		</header>
+
+		<div class="mui-content">
+
+			<div class="row mui-input-row">
+				<textarea id='tbcontent' class="mui-input-clear question" placeholder="分享你的想法..."></textarea>
+			</div>
+
+			<p>添加图片(选填,提供问题截图,总大小10M以下)</p>
+			<!--<div id='image-list' class="row image-list"></div>-->
+			<div class="select-img-box">
+				<div id="addImg">
+					<span class="mui-icon mui-icon-plusempty"></span>
+				</div>
+			</div>
+			
+			<div id="img-view-box">
+				<img id="img-view" src=""/>
+			</div>
+ 
+			<div class="mui-row mui-content-padded">
+				<button type="button" class="mui-btn mui-btn-blue mui-btn-block" id="uploadheadImage">上传</button>
+			</div>
+
+			<ul class="mui-table-view">
+				<li class="mui-table-view-cell">
+					<a class="mui-navigate-right" id="a1">
+						关联技能
+					</a>
+				</li>
+			</ul>
+
+		</div>
+
+		<script src="js/mui.min.js"></script>
+		<!--<script src=" js/feedback.js" type="text/javascript" charset="utf-8"></script>-->
+		<script type="text/javascript">
+			mui.init();
+			mui('.mui-scroll-wrapper').scroll();
+
+			document.getElementById("a1").addEventListener("tap", function() {
+				mui.openWindow({
+					url: "11-guanlian.html"
+				});
+			});
+			
+			//点击图片按钮选择拍照或者相册选择图片
+			document.getElementById("addImg").addEventListener('tap', function() {
+				if(mui.os.plus) {
+					var buttonTit = [{
+						title: "拍照"
+					}, {
+						title: "从手机相册选择"
+					}];
+
+					plus.nativeUI.actionSheet({ 
+						cancel: "取消",
+						buttons: buttonTit
+					}, function(b) { /*actionSheet 按钮点击事件*/
+						switch(b.index) {
+							case 0:
+								break;
+							case 1:
+								getImage(); /*拍照*/
+								break;
+							case 2:
+								galleryImg(); /*打开相册*/
+								break;
+							default:
+								break;
+						}
+					})
+				}
+			}, false);
+
+			// 拍照获取图片
+			function getImage() {
+				var c = plus.camera.getCamera();
+				c.captureImage(function(e) {
+					plus.io.resolveLocalFileSystemURL(e, function(entry) {
+						//var imgSrc = entry.toLocalURL() + "?version=" + new Date().getTime(); //拿到图片路径            	
+						document.getElementById("img-view").src=entry.toLocalURL();
+					}, function(e) {
+						console.log("读取拍照文件错误：" + e.message);
+					});
+				}, function(s) {
+					console.log("error" + s);
+				}, {
+					filename: "_doc/camera/"
+				})
+			}
+
+			// 从相册中选择图片 
+			function galleryImg() {
+				// 从相册中选择图片
+				plus.gallery.pick(function(e) {
+					document.getElementById("img-view").src=e.files;
+//					for(var i in e.files) {
+//						var fileSrc = e.files[i]
+//						setHtml(fileSrc);
+//					}
+				}, function(e) {
+					console.log("取消选择图片");
+				}, {
+					filter: "image",
+					multiple: true,
+					maximum: 1,
+					system: false,
+					onmaxed: function() {
+						plus.nativeUI.alert('最多只能选择1张图片');
+					}
+				});
+			}
+
+			
+
+			document.getElementById("uploadheadImage").addEventListener("tap", function() {
+				uploadimg();
+			});
+			
+			//压缩图片       对图片进行编码        然后向后端发送ajax请求
+			function uploadimg() {
+				var filepath = document.getElementById("img-view").src;
+				console.log(filepath);
+				plus.zip.compressImage({
+						src: filepath,
+						dst: '_doc/zip_' + filepath.substr(filepath.lastIndexOf('/') + 1),
+						quality: 100, //质量1-100	
+						overwrite: true,
+						width: "20%", //缩小到原来的25%			
+						height: "20%" //缩小到原来的25%		
+					},
+					function(event) {
+						//console.log("<=====压缩文件路径=====>"+event.target);			
+						//console.log("<=====压缩后的大小=====>"+event.size);//除1024单位为K
+						//console.log("<=====压缩后的宽度=====>"+event.width);			
+						//console.log("<=====压缩后的高度=====>"+event.height);
+						convertImgToBase64(event.target, function(base64Img) {
+							//console.log("==================");
+							var str = base64Img; //图片64位编码后的数据
+							console.log(str);
+							//从本地找到云服务器的访问地址
+//							var requrl = localStorage.getItem("requrl");
+							//Ajax请求
+							mui.ajax("http://192.168.43.128:8080/myshop/JavaApi", {
+								
+								data: {
+									rnum: "7",
+									content: document.getElementById("tbcontent").value,
+									imgtxt: str
+								},
+								dataType: 'json', //服务器返回json格式数据
+								type: 'post', //HTTP请求类型
+								timeout: 10000, //超时时间设置为10秒；
+								headers: { 'Content-Type': 'application/x-www-form-urlencoded' },
+								success: function(data) {
+									mui.toast("发布成功!");
+									console.log(JSON.stringify(data));
+								},
+								error:function(){
+									console.log("ajax请求失败");
+								}
+							});
+						});
+
+					},
+					function(error) {
+						console.log("压缩失败:" + error.message);
+					}
+				)
+			}
+			
+			
+			
+
+			function convertImgToBase64(url, callback, outputFormat) {
+				var canvas = document.createElement('CANVAS'),
+					　　ctx = canvas.getContext('2d'),
+					img = new Image;　
+				img.crossOrigin = 'Anonymous';
+				img.onload = function() {　　
+					canvas.height = img.height;　　
+					canvas.width = img.width;　　
+					ctx.drawImage(img, 0, 0);　　
+					var dataURL = canvas.toDataURL(outputFormat || 'image/png');　　
+					callback.call(this, dataURL);　　
+					canvas = null;
+				};　　
+				img.src = url;
+			}
+		</script>
+
+		</div>
+
+	</body>
+
+</html>

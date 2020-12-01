@@ -1,0 +1,166 @@
+<!doctype html>
+<html>
+
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+		<meta name="viewport" content="width=device-width,initial-scale=1,minimum-scale=1,maximum-scale=1,user-scalable=no" />
+		<link href="css/mui.min.css" rel="stylesheet" />
+		<style type="text/css">
+			html,body{
+				margin: 0 auto;
+				background-color: white;
+			}
+			.mui-action-back{
+				color: black;
+			}
+			.mui-bar{
+				background: white;
+				box-shadow: none;
+				
+			}
+			.mui-title{
+				color: black;
+				
+			}
+			
+			#a2{
+    		position: absolute;
+    		right: 5px;
+    		top: 5px;
+    		border-radius:15px;
+    	}
+    	*{
+			margin: 0;
+			padding: 0;
+		}
+		
+		.box1{
+			width: 360px;
+		    height: 600px;
+		    border: solid 1px grey;
+		    margin: 48px 0px;
+		   
+		}
+		.box2{
+			margin-top: 20px;
+		}
+		.head{
+			list-style: none;
+		}
+		.head li{
+				float: left;
+				width: 200px;
+				height: 35px;
+				border-left: solid 1px beig;
+				border-bottom: solid 1px b;
+				text-align: center;
+				line-height: 35px;
+				background: linear-gradient(to bottom, bisque );
+				
+			}
+			
+			.mui-control-content {
+				background-color: white;
+				min-height: 550px;
+			}
+			.mui-control-content .mui-loading {
+				margin-top: 50px;
+			}
+			
+			
+		</style>
+
+		</style>
+	</head>
+
+	<body>
+		<header class="mui-bar mui-bar-nav">
+	    <a class="mui-action-back mui-icon mui-icon-left-nav mui-pull-left"></a>
+	    <h1 class="mui-title">关注</h1>
+	    <button type="button" class="mui-icon-extra mui-icon-extra-heart-filled" id="a2">加友</button>
+	</header>
+	
+	<div class="mui-content">
+			<div id="slider" class="mui-slider">
+				<div id="sliderSegmentedControl" class="mui-slider-indicator mui-segmented-control mui-segmented-control-inverted">
+					<a class="mui-control-item" href="#item1mobile">
+				关注
+			</a>
+					<a class="mui-control-item" href="#item2mobile">
+				粉丝
+			</a>
+			
+				</div>
+				<div id="sliderProgressBar" class="mui-slider-progress-bar mui-col-xs-6"></div>
+				<div class="mui-slider-group">
+					<div id="item1mobile" class="mui-slider-item mui-control-content mui-active">
+						<div id="scroll1" class="mui-scroll-wrapper">
+							<div class="mui-scroll">
+								<ul class="mui-table-view">
+									
+									<div class="mui-input-row mui-search">
+									    <input type="search" class="mui-input-clear" placeholder="搜索好友名称       ">
+									</div>
+									
+										<div id="box2">
+											<ul class="mui-table-view">
+											<li class="mui-table-view-cell mui-media">
+									        <a href="javascript:;">
+									            <img class="mui-media-object mui-pull-left" src="img/a.jpeg">
+									            <div class="mui-media-body">
+									                是贝尔呀！
+									                <p class="mui-ellipsis">不要吃我</p>
+									            </div>
+									        </a>
+									    </li>
+									    </ul>
+										</div>
+								</ul>
+							</div>
+						</div>
+					</div>
+					
+					
+					<div id="item2mobile" class="mui-slider-item mui-control-content">
+						<div id="scroll2" class="mui-scroll-wrapper">
+							<div class="mui-scroll">
+								<ul class="mui-table-view">
+									<ul class="mui-table-view">
+									    <li class="mui-table-view-cell mui-media">
+									        <a href="javascript:;">
+									            <img class="mui-media-object mui-pull-left" src="img/b.jpeg">
+									            <div class="mui-media-body">
+									                落尘
+									                <p class="mui-ellipsis">Sweet are the uses of adversity</p>
+									            </div>
+									        </a>
+									    </li>
+									   
+									</ul>
+								</ul>
+							</div>
+						</div>
+					</div>
+					
+
+		</div>
+		
+    <script src="js/mui.js" type="text/javascript" charset="utf-8"></script>
+    <script type="text/javascript">
+    mui.init();
+    document.getElementById("a2").addEventListener("tap",function(){
+    	mui.openWindow({
+    		url:"06-tianjia.html"
+    	});
+    });
+    
+    
+   
+    
+  
+		</script>
+	</body>
+
+</html>
+

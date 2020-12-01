@@ -1,0 +1,486 @@
+<!doctype html>
+<html>
+
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+		<meta name="viewport" content="width=device-width,initial-scale=1,minimum-scale=1,maximum-scale=1,user-scalable=no" />
+		<link href="css/mui.min.css" rel="stylesheet" />
+		<style type="text/css">
+			.mui-action-back{
+				color: black;
+			}
+			
+			.mui-title{
+				color: black;
+				
+			}
+		
+    	*{
+			margin: 0;
+			padding: 0;
+		}
+			#a2{
+    		position: absolute;
+    		right: 5px;
+    		top: 5px;
+    		border-radius:15px;
+    	}
+		.head li{
+				float: left;
+				width: 200px;
+				height: 35px;
+				border-left: solid 1px beig;
+				border-bottom: solid 1px b;
+				text-align: center;
+				line-height: 35px;
+				background: linear-gradient(to bottom, bisque );
+				
+			}
+			
+			.mui-control-content {
+				background-color: white;
+				min-height: 550px;
+			}
+			.mui-control-content .mui-loading {
+				margin-top: 50px;
+			}
+			.a1{
+				width:100%;
+				height: 150px ;
+				background-color: white;
+			}
+			.a2{
+				width: 100px;
+				height: 100px;
+				margin: auto;
+			}
+			.a2 img{
+				width: 100px;
+				height: 100px;
+				margin-top: 25px;
+				border-radius: 50px;
+			}
+			.big{
+				width: 100px;
+				height: 120px;
+				text-align: center;
+				float: left;
+				margin-left: calc(25% - 75px);
+				margin-bottom: 20px;
+				margin-top: 20px;
+				
+			}
+			.small{
+				
+				width: 80px;
+				height: 80px;
+				margin: auto;
+				background-color: #eee;
+				border-radius: 20px;
+			}
+			.small img{
+				width: 80px;
+				height: 80px;
+				border-radius: 10px;
+			}
+			.mui-scroll{
+				width: 100%;
+				height: 500px;
+				background-color: white;
+				
+				margin-top: 0px;
+			}
+			
+			.mui-segmented-control.mui-segmented-control-inverted~.mui-slider-progress-bar
+			{
+				background-color: white;
+			}
+		</style>
+
+		</style>
+	</head>
+
+	<body>
+		<header class="mui-bar mui-bar-nav">
+	    <a class="mui-action-back mui-icon mui-icon-left-nav mui-pull-left"></a>
+	    <h1 class="mui-title">座位框</h1>
+	    <button type="button" class="mui-icon-extra mui-icon-extra-heart-filled" id="a2">我的</button>
+	</header>
+	
+	<div class="mui-content">
+		<div class="a1">
+			<div class="a2">
+				<img src="img/tt.jpeg"/>
+			</div>
+		</div>
+		
+			<div id="slider" class="mui-slider">
+				<div id="sliderSegmentedControl" class="mui-slider-indicator mui-segmented-control mui-segmented-control-inverted">
+					<a class="mui-control-item mui-active" href="#item1mobile">
+						扭蛋机
+					</a>
+					<a class="mui-control-item" href="#item2mobile">
+						官方活动
+					</a>
+					<a class="mui-control-item" href="#item3mobile">
+						我是歌王
+					</a>
+					<a class="mui-control-item" href="#item4mobile">
+						聊天室排行榜
+					</a>
+					<a class="mui-control-item" href="#item5mobile">
+						爵位特权
+					</a>			
+				</div>
+				<div id="sliderProgressBar" class="mui-slider-progress-bar"></div>
+				<div class="mui-slider-group">
+					<div id="item1mobile" class="mui-slider-item mui-control-content mui-active">
+						<div id="scroll1" class="mui-scroll-wrapper">
+							<div class="mui-scroll">
+								<div class="big">
+					                   <div class="small">
+						                 	<img src="img/ww/ww1.PNG" />
+					                   </div>
+					                   <div class="wenzi">
+						                                        魔幻光环
+					                   </div>
+			                    </div>
+			                    <div class="big">
+					                   <div class="small">
+						                 	<img src="img/ww/ww2.PNG" />
+					                   </div>
+					                   <div class="wenzi">
+						                                         魔术帽
+					                   </div>
+			                    </div>
+			                    <div class="big">
+					                   <div class="small">
+						                 	<img src="img/ww/ww3.PNG" />
+					                   </div>
+					                   <div class="wenzi">
+						                                        魔术卡牌
+					                   </div>
+			                    </div>
+			                    <div class="big">
+					                   <div class="small">
+						                 	<img src="img/ww/ww4.PNG" />
+					                   </div>
+					                   <div class="wenzi">
+						                                         塔罗世界
+					                   </div>
+			                    </div>
+			                     <div class="big">
+					                   <div class="small">
+						                 	<img src="img/ww/ww5.PNG" />
+					                   </div>
+					                   <div class="wenzi">
+						                                         向塔罗星座
+					                   </div>
+			                    </div>
+			                     <div class="big">
+					                   <div class="small">
+						                 	<img src="img/ww/ww6.PNG" />
+					                   </div>
+					                   <div class="wenzi">
+						                                         月圆之秋
+					                   </div>
+			                    </div>
+			                     <div class="big">
+					                   <div class="small">
+						                 	<img src="img/ww/ww7.PNG" />
+					                   </div>
+					                   <div class="wenzi">
+						                                         夏日冰块
+					                   </div>
+			                    </div>
+			                     <div class="big">
+					                   <div class="small">
+						                 	<img src="img/ww/ww8.PNG" />
+					                   </div>
+					                   <div class="wenzi">
+						                                         萌萌章鱼
+					                   </div>
+			                    </div>
+			                     <div class="big">
+					                   <div class="small">
+						                 	<img src="img/ww/ww9.PNG" />
+					                   </div>
+					                   <div class="wenzi">
+						                                         海底世界
+					                   </div>
+			                    </div>
+							</div>
+						</div>
+					</div>
+					
+					<div id="item2mobile" class="mui-slider-item mui-control-content">
+						<div id="scroll2" class="mui-scroll-wrapper">
+							<div class="mui-scroll">
+								  <div class="big">
+					                   <div class="small">
+						                 	<img src="img/ww/ww10.PNG" />
+					                   </div>
+					                   <div class="wenzi">
+						                                         仙侣.缘
+					                   </div>
+			                    </div>
+			                    <div class="big">
+					                   <div class="small">
+						                 	<img src="img/ww/ww11.PNG" />
+					                   </div>
+					                   <div class="wenzi">
+						                                         仙侣.缘
+					                   </div>
+			                    </div>
+			                    <div class="big">
+					                   <div class="small">
+						                 	<img src="img/ww/ww12.PNG" />
+					                   </div>
+					                   <div class="wenzi">
+						                                         仙侣.情
+					                   </div>
+			                    </div>
+			                    <div class="big">
+					                   <div class="small">
+						                 	<img src="img/ww/ww13.PNG" />
+					                   </div>
+					                   <div class="wenzi">
+						                                         仙侣.情
+					                   </div>
+			                    </div>
+			                    <div class="big">
+					                   <div class="small">
+						                 	<img src="img/ww/ww14.PNG" />
+					                   </div>
+					                   <div class="wenzi">
+						                                         仙侣.心
+					                   </div>
+			                    </div>
+			                    <div class="big">
+					                   <div class="small">
+						                 	<img src="img/ww/ww15.PNG" />
+					                   </div>
+					                   <div class="wenzi">
+						                                         仙侣.心
+					                   </div>
+			                    </div>
+			                    <div class="big">
+					                   <div class="small">
+						                 	<img src="img/ww/ww16.PNG" />
+					                   </div>
+					                   <div class="wenzi">
+						                                         七夕限定
+					                   </div>
+			                    </div>
+			                    <div class="big">
+					                   <div class="small">
+						                 	<img src="img/ww/ww17.PNG" />
+					                   </div>
+					                   <div class="wenzi">
+						                                         七夕限定
+					                   </div>
+			                    </div>
+			                    <div class="big">
+					                   <div class="small">
+						                 	<img src="img/ww/ww18.PNG" />
+					                   </div>
+					                   <div class="wenzi">
+						                                         冰鹊桥
+					                   </div>
+			                    </div>
+							</div>
+						</div>
+					</div>
+					
+					<div id="item3mobile" class="mui-slider-item mui-control-content">
+						<div id="scroll3" class="mui-scroll-wrapper">
+							<div class="mui-scroll">
+			                    <div class="big">
+					                   <div class="small">
+						                 	<img src="img/ww/ww19.PNG" />
+					                   </div>
+					                   <div class="wenzi">
+						                                         雷神冠名
+					                   </div>
+			                    </div>
+			                    <div class="big">
+					                   <div class="small">
+						                 	<img src="img/ww/ww20.PNG" />
+					                   </div>
+					                   <div class="wenzi">
+						                                         小妈冠名
+					                   </div>
+			                    </div>
+			                    <div class="big">
+					                   <div class="small">
+						                 	<img src="img/ww/ww21.PNG" />
+					                   </div>
+					                   <div class="wenzi">
+						                                         博哥冠名
+					                   </div>
+			                    </div>
+			                    <div class="big">
+					                   <div class="small">
+						                 	<img src="img/ww/ww22.PNG" />
+					                   </div>
+					                   <div class="wenzi">
+						                                         歌手晋级
+						                                         
+					                   </div>
+			                    </div>
+			                    <div class="big">
+					                   <div class="small">
+						                 	<img src="img/ww/ww23.PNG" />
+					                   </div>
+					                   <div class="wenzi">
+						                                         我是歌王
+						                                         
+					                   </div>
+			                    </div>
+			                    <div class="big">
+					                   <div class="small">
+						                 	<img src="img/ww/ww24.PNG" />
+					                   </div>
+					                   <div class="wenzi">
+						                                         我是歌王
+						                                         
+					                   </div>
+			                    </div>
+			                   
+							</div>
+						</div>
+					</div>
+					
+					
+					<div id="item4mobile" class="mui-slider-item mui-control-content">
+						<div id="scroll4" class="mui-scroll-wrapper">
+							<div class="mui-scroll">
+			                    <div class="big">
+					                   <div class="small">
+						                 	<img src="img/ww/ww25.PNG" />
+					                   </div>
+					                   <div class="wenzi">
+						                                         长情榜一
+					                   </div>
+			                    </div>
+			                    <div class="big">
+					                   <div class="small">
+						                 	<img src="img/ww/ww26.PNG" />
+					                   </div>
+					                   <div class="wenzi">
+						                            长情榜二     
+					                   </div>
+			                    </div>
+			                    <div class="big">
+					                   <div class="small">
+						                 	<img src="img/ww/ww27.PNG" />
+					                   </div>
+					                   <div class="wenzi">
+						                                      长情榜三
+					                   </div>
+			                    </div>
+			                    <div class="big">
+					                   <div class="small">
+						                 	<img src="img/ww/ww28.PNG" />
+					                   </div>
+					                   <div class="wenzi">
+						                                         守护榜一
+					                   </div>
+			                    </div>
+			                    <div class="big">
+					                   <div class="small">
+						                 	<img src="img/ww/ww29.PNG" />
+					                   </div>
+					                   <div class="wenzi">
+						                                       守护榜二
+					                   </div>
+			                    </div>
+			                    <div class="big">
+					                   <div class="small">
+						                 	<img src="img/ww/ww30.PNG" />
+					                   </div>
+					                   <div class="wenzi">
+						                                     守护榜三
+					                   </div>
+			                    </div>
+			                    <div class="big">
+					                   <div class="small">
+						                 	<img src="img/ww/ww31.PNG" />
+					                   </div>
+					                   <div class="wenzi">
+						                                         守护天使
+					                   </div>
+			                    </div>
+			                    <div class="big">
+					                   <div class="small">
+						                 	<img src="img/ww/ww32.PNG" />
+					                   </div>
+					                   <div class="wenzi">
+						                                         幸运降临
+					                   </div>
+			                    </div>
+							</div>
+						</div>
+					</div>
+					
+					
+					<div id="item5mobile" class="mui-slider-item mui-control-content">
+						<div id="scroll5" class="mui-scroll-wrapper">
+							<div class="mui-scroll">
+								<div class="big">
+					                   <div class="small">
+						                 	<img src="img/ww/ww33.PNG" />
+					                   </div>
+					                   <div class="wenzi">
+						                                         黄金圈
+					                   </div>
+			                    </div>
+			                    <div class="big">
+					                   <div class="small">
+						                 	<img src="img/ww/ww34.PNG" />
+					                   </div>
+					                   <div class="wenzi">
+						                                         铂金圈
+					                   </div>
+			                    </div>
+			                    <div class="big">
+					                   <div class="small">
+						                 	<img src="img/ww/ww35.PNG" />
+					                   </div>
+					                   <div class="wenzi">
+						                                        钻石圈
+					                   </div>
+			                    </div>
+			                    
+			                    
+			                    
+							</div>
+						</div>
+					</div>
+					
+					
+
+		</div>
+		
+    <script src="js/mui.js" type="text/javascript" charset="utf-8"></script>
+    <script src="js/jquery-1.11.0.js" type="text/javascript" charset="utf-8"></script>
+    <script type="text/javascript">
+    mui.init();
+    document.getElementById("a2").addEventListener("tap",function(){
+    	mui.openWindow({
+    		url:"06-tianjia.html"
+    	});
+    });
+    
+    $(".big").click(function(){
+				mui.alert("VIP专属哦！")
+			})
+   
+    
+  
+		</script>
+	</body>
+
+</html>
+

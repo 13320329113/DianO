@@ -1,0 +1,183 @@
+<!doctype html>
+<html>
+
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+		<meta name="viewport" content="width=device-width,initial-scale=1,minimum-scale=1,maximum-scale=1,user-scalable=no" />
+		<link href="css/mui.min.css" rel="stylesheet" />
+		<style type="text/css">
+			*{
+				margin: 0;
+				padding: 0;
+			}
+			html,body{
+				width: 100%;
+				height: 100%;
+			}
+			.body{
+				background-color: gainsboro;
+				position: relative;
+				
+			}
+			.fanhui{
+				background-color: ghostwhite;
+				height: 35px;
+				width: 350px;
+				margin: auto;
+				border-radius: 10px;
+				font-size: 13px;
+				border: solid 1px gainsboro;
+				color: black;
+			}
+			.fanhui:hover{
+				box-shadow: 0 0 13px;
+			}
+			.dakk{
+				
+				position: absolute;
+				top: 80px;
+				width: 300px;
+				height: 450px;
+				margin-left: calc(50% - 150px);
+				border-radius:10px;
+				float: left;
+				background-image: linear-gradient(to bottom,yellow,lightblue);
+			}
+			#nichen{
+				height: 30px;
+				width: 250px;
+				margin-left: 25px;
+				margin-top: 10px;
+				border-radius:10px;
+				/*position: absolute;*/
+				float: left;
+			}
+			.toux{
+				height: 80px;
+				width: 80px;
+				/*background-color: green;*/
+				/*position: relative;*/
+				margin-top: 30px;
+				margin-left: 105px;
+				border-radius:40px;
+				float: left;
+			}
+			.toux img{
+				height: 80px;
+				width: 80px;
+				border-radius:40px;
+			}
+			.toux:hover{
+				border: solid 2px aquamarine;
+			}
+			.pp{
+				height: 80px;
+				width: 80px;
+				/*background-color: green;*/
+				/*position: relative;*/
+				margin-top: 10px;
+				margin-left: 15px;
+				border-radius:40px;
+				float: left;
+			}
+			.pp img{
+				height: 80px;
+				width: 80px;
+				border-radius:40px;
+			}
+			.pp:hover{
+				border: solid 2px aquamarine;
+			}
+			#bb{
+				margin-top: 10px;
+				height: 30px;
+				width: 300px;
+				padding-left: 110px;
+				font-size: 15px;
+			}
+			span{
+				color: black;
+			}
+			.mui-icon{
+				margin-top: 20px;
+				margin-left: 20px;
+			}
+		</style>
+	</head>
+
+	<body>
+	
+    <a href="find.html">
+	 <span  class="mui-icon mui-icon-arrowleft tb"></span>
+	</a>
+	<body>
+		<!--<nav class="mui-bar mui-bar-tab">
+	        <a class="mui-tab-item mui-active">
+	            <span class="mui-icon mui-icon-home"></span>
+	            <span class="mui-tab-label">首页</span>
+	        </a>
+	        <a class="mui-tab-item">
+	            <span class="mui-icon mui-icon-more"></span>
+	            <span class="mui-tab-label">发现</span>
+	        </a>
+	        
+	        <a class="mui-tab-item">
+	            <span class="mui-icon mui-icon-chatboxes"></span>
+	            <span class="mui-tab-label">消息</span>
+	        </a>
+	        
+	        <a class="mui-tab-item">
+	            <span class="mui-icon mui-icon-gear"></span>
+	            <span class="mui-tab-label">我的</span>
+	        </a>
+	    </nav>-->
+    
+        
+		
+		<div class="dakk">
+			<div class="toux" >
+				<img src="img/toux1.jpg" id="currentimg"/>
+			</div>
+			<br />
+			<!--<input type="file" name="" id="bb" value="" />-->
+			
+			<input type="text" name="" id="nichen" value="" placeholder="请输入昵称"/>
+			<div class="pp"><img class="cc" src="img/huowu.jpg"/></div>
+			<div class="pp"><img class="cc" src="img/toux2.jpg"/></div>
+			<div class="pp"><img class="cc" src="img/toux4.png"/></div>
+			<div class="pp"><img class="cc" src="img/toux3.jpg"/></div>
+			<div class="pp"><img class="cc" src="img/tv3.jpg"/></div>
+			<div class="pp"><img class="cc" src="img/toux7.jpg"/></div>	
+		</div>
+	
+		
+		<script src="js/mui.min.js"></script>
+		<script type="text/javascript">
+			mui.init();
+			
+			var list=document.getElementsByClassName("cc");
+			console.log(list.length);
+			for (var i=0;i<list.length;i++) {
+				list[i].addEventListener("tap",function(){
+					console.log("==============");
+					var that=this;
+					var imgurl=that.src;
+					document.getElementById("currentimg").src=imgurl;
+				
+				});
+			}
+			
+			
+			
+			
+//			function adborder(){
+//				document.getElementById("p1").style.borderTop="solid 3px green";
+//			}
+//			function removeborder(){
+//				document.getElementById("p1").style.borderTop=null;
+//			}
+		</script>
+	</body>
+
+</html>

@@ -1,0 +1,349 @@
+<!doctype html>
+<html>
+
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+		<meta name="viewport" content="width=device-width,initial-scale=1,minimum-scale=1,maximum-scale=1,user-scalable=no" />
+		<link href="css/mui.min.css" rel="stylesheet" />
+		<style type="text/css">
+			*{
+				margin: 0;
+				padding: 0;
+			}
+			html,body{
+				width: 100%;
+				height: 100%;
+			}
+			
+			#top{
+				width: 100%;
+				height: 26%;
+				background-color: #00BFFF;
+				position: absolute;
+				padding-bottom: 20px;
+				/*background-image: url(image/06.jpg);*/
+				/*background-image: linear-gradient(#00BFFF,white);*/
+			}
+			.ID{
+				width: 150px;
+				color: white;
+				padding-left: 30px;
+			}
+			p{
+				color: white;
+				padding-left: 30px;
+			}
+			.name{
+				/*width: 150px;*/
+				color: white;
+				padding-left: 30px;
+				font-size: 20px;
+				padding-top: 25px;
+			}
+			.left{
+				float: left;
+				width: 150px;
+				/*background-color: aquamarine;*/
+			}
+			.right{
+				width: 60px;
+				height: 60px;
+				/*background-color: white;*/
+				float: right;
+				padding-top: 20px;
+				margin-right: 20px;
+				/*padding-right: 0px;*/
+			}
+			img{
+				border-radius: 10px;
+				width: 60px;
+				height: 60px;
+			}
+			.chakan{
+				width:100% ;
+				float: left;
+				/*background-color: red;
+				position: relative;*/
+				
+			}
+			
+			.chakan li{
+				float: left;
+				list-style: none;
+				/*margin-left: 0px;*/
+				padding-left: 20px;
+				/*padding-right: 10px;*/
+				text-align: center;
+			}
+			/*p{
+				background-color: firebrick;
+			}*/
+			.mokuai{
+				width: 94%;
+				position: relative;
+				left: 3%;
+				height: 65%;
+				background-color: white;
+				float: left;
+				/*padding-top: 50px;*/
+				border-radius: 10px;
+				margin-bottom: 20px;
+				
+			}
+			.xiaokuai{
+				border-radius: 10px;
+				margin-top: 10px;
+				padding-top: 20px;
+				margin-left: 45px;
+				float: left;
+				width: 60px;
+				height: 80px;
+				/*background-color: forestgreen;*/
+				/*background-image: url(image/订单.svg);
+				background-repeat: no-repeat;*/
+			}
+			.tupian{
+				width: 35px;
+				height: 35px;
+				/*margin-top: 5px;*/
+				/*background-color: #1E90FF;*/
+				margin: auto;
+				border-radius: 10px;
+			}
+			.tupian img{
+				
+				width: 30px;
+				height: 30px;
+				margin-left: 3px;
+			}
+			.wenzi{
+				/*background-color: darkblue;*/
+				text-align: center;
+				height: 25px;
+				line-height: 25px;
+				margin-top: 5px;
+				font-size: 13px;
+				color: black;
+			}
+			.gengduo{
+				width: 94%;
+				height: 40%;
+				position: relative;
+				top: 40%;
+				left: 3%;
+				background-color: white;
+				border-radius: 10px;
+			}
+			.pp{
+				padding-top: 20px;
+				font-size: 16px;
+				font-family: "微软雅黑";
+				color: black;
+			}
+			.inner{
+				/*background-color: #007AFF;*/
+				width: 70px;
+				height: 80px;
+				float: left;
+				margin-left: 14px;
+				margin-right: 6px;
+				margin-bottom: 25px;
+				margin-top: 15px;
+				border-radius: 10px;
+			}
+			/*.mui-tab-item{
+				background-color: deepskyblue;
+			}
+			.mui-tab-label{
+				color: white;
+			}
+			.mui-icon{
+				color: white;
+			}*/
+		</style>
+	</head>
+
+	<body>
+		<nav class="mui-bar mui-bar-tab" id="tabbox">
+	    <a class="mui-tab-item" href="index.html">
+	        <span class="mui-icon mui-icon-qq"></span>
+	        <span class="mui-tab-label">首页</span>
+	    </a>
+	    <a class="mui-tab-item" href="find.html">
+	        <span class="mui-icon mui-icon-eye"></span>
+	        <span class="mui-tab-label">发现</span>
+	    </a>
+	    <a class="mui-tab-item" href="01-xiaoxi.html">
+	        <span class="mui-icon mui-icon-weixin"></span>
+	        <span class="mui-tab-label">消息</span>
+	    </a>
+	    <a class="mui-tab-item mui-active" href="my.html">
+	        <span class="mui-icon mui-icon-pengyouquan"></span>
+	        <span class="mui-tab-label">我的</span>
+	    </a>
+	</nav>
+		<div id="top">
+			<div class="left">
+				<p class="name" id="sanuser">武林萌主</p>
+				<p class="ID">ID 89336716</p>
+			</div>
+			<div class="right">
+				<img src="image/6239936_092702973000_2.jpg"/>
+			</div>
+			<div class="chakan">
+			<ul>
+				<li><p>0</p><p>关注</p></li>
+				<li><p>0</p><p>粉丝</p></li>
+				<li><p>0</p><p>浏览</p></li>
+				<li><p>0</p><p>足迹</p></li>
+			</ul>
+			</div>
+			<div class="mokuai">
+				<a href="03-dingdan.html">
+					<div class="xiaokuai">
+						<div class="tupian">
+							<img src="img/054.png"/>
+						</div>
+						<div class="wenzi">
+							订单
+						</div>
+					</div>
+				</a>
+				
+				<a href="cheduidan.html">
+					<div class="xiaokuai">
+						<div class="tupian">
+							<img src="img/055.png"/>
+						</div>
+						<div class="wenzi">
+							车队单
+						</div>
+					</div>
+				</a>
+				
+				<a href="wallet.html">
+					<div class="xiaokuai">
+						<div class="tupian">
+							<img src="img/056.png"/>
+						</div>
+						<div class="wenzi">
+							钱包
+						</div>
+					</div>
+				</a>
+				
+			</div>
+			
+		</div>
+		<div class="gengduo">
+			<p class="pp"><strong>更多服务</strong></p>
+			<a href="hyzx.html">
+				<div class="inner">	
+					<div class="tupian">
+						<img src="img/057.png"/>
+					</div>
+					<div class="wenzi">
+							会员中心
+					</div>
+				</div>
+			</a>
+			
+			<a href="zhuangban.html">
+				<div class="inner">
+					<div class="tupian">
+						<img src="img/058.png"/>
+					</div>
+					<div class="wenzi">
+							主页装扮
+					</div>
+				</div>
+			</a>
+			<a href="13-gexing.html">
+			<div class="inner">
+				<div class="tupian">
+						<img src="img/059.png"/>
+					</div>
+					<div class="wenzi">个性装扮</div>
+			</div>
+			</a>
+			<a href="haitan.html">
+				<div class="inner">
+					<div class="tupian">
+						<img src="img/060.png"/>
+					</div>
+					<div class="wenzi">
+							海滩
+					</div>
+				</div>
+			</a>
+			<a href="play.html">
+				<div class="inner">
+					<div class="tupian">
+						<img src="img/061.png"/>
+					</div>
+					<div class="wenzi">
+							玩一玩
+					</div>
+				</div>
+			</a>
+			<a href="chelping.html">
+			<div class="inner">
+				<div class="tupian">
+						<img src="img/062.png"/>
+					</div>
+					<div class="wenzi">
+							帮助
+					</div>
+			</div>
+			</a>
+			
+			<a href="chat.html">
+				<div class="inner">
+					<div class="tupian">
+						<img src="img/063.png"/>
+					</div>
+					<div class="wenzi">
+							在线客服
+					</div>
+				</div>
+			</a>
+			<a href="setting.html">
+				<div class="inner">
+					<div class="tupian">
+						<img src="img/064.png"/>
+					</div>
+					<div class="wenzi">
+							设置
+					</div>
+				</div>
+			</a>
+			
+			
+		</div>
+		
+		<script src="js/mui.min.js"></script>
+		<script type="text/javascript">
+			mui.init()
+			mui("#tabbox").on("tap","a.mui-tab-item",function(e){
+		    	e.preventDefault();
+		    	var that=this;
+		    	var currenturl=that.href;
+		    	mui.openWindow({
+		    		url:currenturl,
+		    		id:currenturl
+		    	});
+		    	
+		    });
+		    
+		    mui.plusReady(function(){
+		    	var userinfo=JSON.parse(localStorage.getItem("currentuser"));
+//		    	console.log(userinfo);
+		    	document.getElementById("sanuser").innerHTML=userinfo.sanuser;
+		    })
+		    
+		    
+		</script>
+	</body>
+
+</html>

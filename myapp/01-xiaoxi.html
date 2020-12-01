@@ -1,0 +1,151 @@
+<!doctype html>
+<html>
+<head>
+    <meta charset="UTF-8" />
+    <title>Document</title>
+    <meta name="viewport" content="width=device-width,initial-scale=1,minimum-scale=1,maximum-scale=1,user-scalable=no" />
+    <link rel="stylesheet" type="text/css" href="css/mui.css"/>
+    <style type="text/css">
+    	
+    	html,body{
+				margin: 0 auto;
+				background-color: white;
+			}
+			.mui-action-back{
+				color: black;
+			}
+			.mui-bar{
+				background: white;
+				box-shadow: none;
+				
+			}
+			.mui-title{
+				color: black;
+				
+			}
+			.mui-content{
+    		background-color: white;
+    	}
+    	#a1{
+    		position: absolute;
+    		right: 5px;
+    		top: 5px;
+    		border-radius:15px;
+    	}
+    	
+	    /*.mui-table-view{
+	    	margin-top: 50px;
+	    	border: solid 1px #eee;
+	    	border-radius: 10px;
+	    	
+	    }*/
+    	
+    	
+    </style>
+</head>
+<body>
+	
+	<div id="a2">
+		<header class="mui-bar mui-bar-nav">
+	    <a class="mui-action-back mui-icon mui-icon-left-nav mui-pull-left"></a>
+	    <h1 class="mui-title">消息</h1>
+	    <button type="button" class="mui-icon-extra mui-icon-extra-heart-filled" id="a1">关注</button>
+	</header>
+	
+	<nav class="mui-bar mui-bar-tab" id="tabbox">
+	    <a class="mui-tab-item" href="index.html">
+	        <span class="mui-icon mui-icon-qq"></span>
+	        <span class="mui-tab-label">首页</span>
+	    </a>
+	    <a class="mui-tab-item" href="find.html">
+	        <span class="mui-icon mui-icon-eye"></span>
+	        <span class="mui-tab-label">发现</span>
+	    </a>
+	    <a class="mui-tab-item mui-active" href="01-xiaoxi.html">
+	        <span class="mui-icon mui-icon-weixin"></span>
+	        <span class="mui-tab-label">消息</span>
+	    </a>
+	    <a class="mui-tab-item" href="my.html">
+	        <span class="mui-icon mui-icon-pengyouquan"></span>
+	        <span class="mui-tab-label">我的</span>
+	    </a>
+	</nav>
+	
+	<div class="mui-content">
+	    <div class="box1">
+	    
+	    <ul class="mui-table-view">
+	        <li class="mui-table-view-cell mui-media" id="x1">
+	            <a href="javascript:;">
+	                <img class="mui-media-object mui-pull-left" src="img/xx.png">
+	                <div class="mui-media-body">
+	                    互动消息
+	                    <p class="mui-ellipsis"></p>
+	                </div>
+	            </a>
+	        </li>
+	        <li class="mui-table-view-cell mui-media" id="x2">
+	            <a href="javascript:;">
+	                <img class="mui-media-object mui-pull-left" src="img/sy.png">
+	                <div class="mui-media-body">
+	                    订单消息
+	                    <p class="mui-ellipsis"></p>
+	                </div>
+	            </a>
+	        </li>
+	        
+	        
+	   </ul>
+	   
+	   
+	</div>
+	</div>
+	
+	
+	
+	
+	
+	
+	
+    
+    <script src="js/mui.js" type="text/javascript" charset="utf-8"></script>
+    <script src="js/jquery-1.11.0.min.js" type="text/javascript" charset="utf-8"></script>
+    <script type="text/javascript">
+    mui.init();
+    
+    mui("#tabbox").on("tap","a.mui-tab-item",function(e){
+    	e.preventDefault();
+    	var that=this;
+    	var currenturl=that.href;
+    	mui.openWindow({
+    		url:currenturl,
+    		id:currenturl
+    	});
+
+    });
+    
+    
+    document.getElementById("a1").addEventListener("tap",function(){
+    	mui.openWindow({
+    		url:"04-guanzhu.html"
+    	});
+    });
+    
+    document.getElementById("x1").addEventListener("tap",function(){
+    	mui.openWindow({
+    		url:"02-hudong.html"
+    	});
+    });
+    
+    document.getElementById("x2").addEventListener("tap",function(){
+    	mui.openWindow({
+    		url:"03-dingdan.html"
+    	});
+    });
+    
+    </script>
+    
+	</div>
+	
+</body>
+</html>

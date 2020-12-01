@@ -1,0 +1,691 @@
+<!doctype html>
+<html>
+
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+		<meta name="viewport" content="width=device-width,initial-scale=1,minimum-scale=1,maximum-scale=1,user-scalable=no" />
+		<link href="css/mui.min.css" rel="stylesheet" />
+		<link rel="stylesheet" type="text/css" href="../css/app.css" />
+		<style type="text/css">
+			html body{
+				width: 100%;
+				height: 100%;
+				overflow: hidden;
+				/*background-color: white;*/
+				
+			}
+			.box1{
+				width: auto;
+				height: 34px;
+				margin-top: 10px;
+				margin-bottom: 10px;
+				/*background-color: white;*/
+				
+			}
+			#searchInput{
+				background-color: white!important;
+			}
+			.box2{
+				width:98%;
+				height: 280px;
+				margin-left: 3px;
+				margin-bottom: 10px;
+				border-radius: 10px;
+				background-color: white;
+			}
+			#box3{
+		        width: 340px;
+				height: 220px;
+				/*margin-left: 10px;
+				margin-right: 10px;*/
+				margin: 5px 10px 10px 25px;
+				/*background-color: cornflowerblue;*/
+				border-radius: 20px;
+				background-color: white;
+				position:relative;
+		        overflow:hidden;
+	            }
+			.box4{
+				width: auto;
+				height: 200px;
+				background-color: white;
+				/*overflow-y: scroll;*/
+				margin-left: 3px;
+				float: left;
+			}
+			input[type=search] {
+			    font-size: 16px;
+			    -webkit-box-sizing: border-box;
+			    box-sizing: border-box;
+			    height: 34px;
+			    text-align: center;
+			    margin-bottom: 0.1px;
+			   /* border-radius: 10px;*/
+			    background-color: rgba(0,0,0.01,.0.005);
+			}
+			.mui-search{
+				width: 78%!important;
+				margin-left: 5px;
+				border-radius: 20px;
+				float: left;
+				
+			}
+			#a1{
+				width: 18%;
+				height: 34px;
+				padding-top: 5px;
+				margin-left: 5px;
+				/*border: solid 1px gainsboro;*/
+			/*	background-color: blueviolet;*/
+				float: left;
+			}
+			#a2{
+				
+				width: 80px;
+				height: 80px;
+				/*background-color:peachpuff;*/
+				margin-top: 5px;
+				margin-left: 15px;
+				margin-bottom: 5px;
+				float: left;
+				border-radius: 10px;
+				position: relative;
+			}
+			#a2 img{
+				width: 45px;
+				height: 45px;
+				margin-top: 5px;
+				margin-left: 17.5px;
+				position: absolute;
+				border-radius: 50px;
+				box-shadow: 0 0 5px rgba(0,0,0,0.5);
+			}
+			#ax{
+				width: 80px;
+				height: 30px;
+				line-height: 30px;
+				font-size: 12px;
+				text-align: center;
+				position: absolute;
+				margin-top: 50px;
+			}
+			#ax a{
+				color: #000000;
+			}
+			#a3{
+				
+				width: 340px;
+				height: 220px;
+			}
+			#a4{}
+			.slide{
+				width:340px;
+				height:220px;
+				position:absolute;
+			}
+			.mui-control-content {
+				background-color: white;
+				min-height: 500px;
+			}
+			.mui-control-content .mui-loading {
+				margin-top: 50px;
+			}
+			.mui-bar~.mui-content .mui-fullscreen{
+				top:560px!important;
+			}
+			.mui-scroll{
+				height: 900px!important;
+				overflow-y:scroll ;
+			}
+			.four{
+				width: 400px;
+				height: 400px;
+				/*background-color: palegreen;*/
+			}
+			.f-one{
+				width: 50px;
+				height: 50px;
+				margin-top: 5px;
+				/*background-color: burlywood;*/
+				float: left;
+			}
+			.f-two{
+				width: 350px;
+				height: 25px;
+				margin-top: 5px;
+				padding-left: 8px;
+				/*background-color: plum;*/
+				float: left;
+			}
+			.f-three{
+				width:45px;
+				height: 25px;
+				color: white;
+				text-align: center;
+				border-radius: 10px;
+				line-height: 25px;
+				margin-left: 10px;
+				background-color: deeppink;
+				float: left;
+			}
+			.f-four{
+				width: 300px;
+				height: 260px;
+				margin-top: 10px;
+				margin-left: 45px;
+				/*background-color: palegoldenrod;*/
+				float: left;
+			}
+			.f-five{
+				width: 300px;
+				height: 25px;
+				margin-top: 10px;
+				margin-left: 20px;
+				color: #74777B;
+				/*background-color: palevioletred;*/
+				float: left;
+			}
+			.f-six{
+				width: 400px;
+				height: 70px;
+				margin-left: 3px;
+				/*margin-top: 8px;*/
+				/*background-color: cornflowerblue;*/
+				float: left;
+			}
+			.six-one{
+				width: 120px;
+				height: 50px;
+				line-height: 50px;
+				text-align: center;
+				margin-top: 5px;
+			/*	background-color: orangered;*/
+				float: left;
+			}
+			.six-two{
+				width: 120px;
+				height: 50px;
+				line-height: 50px;
+				text-align: center;
+				margin-top: 5px;
+			/*	background-color: orangered;*/
+				float: left;
+			}
+			.six-three{
+				width: 120px;
+				height: 50px;
+				line-height: 50px;
+				text-align: center;
+				margin-top: 5px;
+			/*	background-color: orangered;*/
+				float: left;
+			}
+		</style>
+	</head>
+	<body>
+		<nav class="mui-bar mui-bar-tab" id="tabbox">
+	    <a class="mui-tab-item mui-active" href="index.html">
+	        <span class="mui-icon mui-icon-qq"></span>
+	        <span class="mui-tab-label">首页</span>
+	    </a>
+	    <a class="mui-tab-item" href="find.html">
+	        <span class="mui-icon mui-icon-eye"></span>
+	        <span class="mui-tab-label">发现</span>
+	    </a>
+	    <a class="mui-tab-item" href="01-xiaoxi.html">
+	        <span class="mui-icon mui-icon-weixin"></span>
+	        <span class="mui-tab-label">消息</span>
+	    </a>
+	    <a class="mui-tab-item" href="my.html">
+	        <span class="mui-icon mui-icon-pengyouquan"></span>
+	        <span class="mui-tab-label">我的</span>
+	    </a>
+	</nav>
+    <div class="mui-content">
+    	
+        <div class="box1">
+        
+			<div class="mui-input-row mui-search" id="searchForm">
+				<input type="search" id="searchInput" onkeyup="enterSearch(event)"  class="mui-input-clear" placeholder="搜索品类，昵称，ID">
+			</div>
+			<div id="a1">
+				<a href="publish.html"><span class="mui-icon mui-icon-camera"></span><span>发布</span></a>
+			</div>
+        </div>
+        
+		<div class="box2">
+			<div id="a2">
+				<a href="wangzhe.html"><img src="img/wangzhe.png"/></a>
+				<div id="ax"><a href="peace.html">王者荣耀</a></div>
+			</div>
+			<div id="a2">
+				<a href="peace.html"><img src="img/hui.png"></a>
+				<div id="ax"><a href="peace.html">和平精英</a></div>
+			</div>
+			<div id="a2">
+				<a href="LOL.html"><img src="img/lol (2).png"></a>
+				<div id="ax"><a href="peace.html">LOL</a></div>
+			</div>
+			<div id="a2">
+				<a href="juediqiusheng.html"><img src="img/juedi.png"></a>
+				<div id="ax"><a href="peace.html">绝地求生</a></div>
+			</div>
+			<div id="a2">
+				<a href="cloud.html"><img src="img/yun.png"></a>
+				<div id="ax"><a href="peace.html">云顶之弈</a></div>
+			</div>
+			<div id="a2">
+				<a href="rainbow.html"><img src="img/42 - Lucky Rainbow (Flat).png"></a>
+				<div id="ax"><a href="peace.html">彩虹六号</a></div>
+			</div>
+			<div id="a2">
+				<a href="music.html"><img src="img/music.png"></a>
+				<div id="ax"><a href="peace.html">音乐</a></div>
+			</div>
+			<div id="a2">
+			<a href="daota2.html"><img src="img/daota.png"></a>
+			<div id="ax"><a href="peace.html">刀塔2</a></div>
+			</div>
+			<div id="a2">
+				<a href="wuziqi.html"><img src="img/icon2.png"></a>
+				<div id="ax"><a href="peace.html">五子棋</a></div>
+			</div>
+			<div id="a2">
+				<a href="CS-GO.html"><img src="img/cs-go-icon.png"></a>
+				<div id="ax"><a href="CS-GO.html">CS:GO</a></div>
+			</div>
+			<div id="a2">
+				<a href="APEX.html"><img src="img/apex.png"></a>
+				<div id="ax"><a href="APEX.html">APEX英雄</a></div>
+			</div>
+			<div id="a2">
+				<a href="more.html"><img src="img/more.png"></a>
+				<div id="ax"><a href="peace.html">更多</a></div>
+			</div>
+		</div>
+		
+		<div id="box3" onmouseover="stop()" onmouseout="start()">
+		<div id="a3" class="slide"><a href="###"><img src="img/ptwo.jpg"></a></div>
+		<div id="a3" class="slide"><a href="###"><img src="img/one.jpg"></a></div>
+		<div id="a3" class="slide"><a href="###"><img  src="img/two.jpg"></a></div>
+		<div id="a3" class="slide"><a href="###"><img src="img/poneo.png"></a></div>
+		<div id="a3" class="slide"><a href="###"><img src="img/ptwo.jpg"></a></div>
+	    </div>
+		
+		<div class="box4">
+			<div id="slider" class="mui-slider mui-full-screen">
+				<div id="sliderSegmentedControl" class="mui-scroll-wrapper mui-slider-indicator mui-segmented-control mui-segmented-control-inverted">
+					<div class="mui-scroll">
+						<a class="mui-control-item mui-active" href="#item1mobile">
+							关注
+						</a>
+						<a class="mui-control-item" href="#item2mobile">
+							推荐
+						</a>
+						<a class="mui-control-item" href="#item3mobile">
+							附近
+						</a>
+						<a class="mui-control-item" href="#item4mobile">
+							王者荣耀
+						</a>
+						<a class="mui-control-item" href="#item5mobile">
+							颜值
+						</a>
+						<a class="mui-control-item" href="#item6mobile">
+							才艺
+						</a>
+					</div>
+				</div>
+				<div class="mui-slider-group">
+					<div id="item1mobile" class="mui-slider-item mui-control-content mui-active">
+						<div id="scroll1" class="mui-scroll-wrapper">
+							<div class="mui-scroll" id="listbox1">
+								<!--<div class="four">
+									<div id="f-one">
+										<img src="img/cbd.jpg" style="width: 50px;height: 50px;border-radius: 10px;"/>
+									</div>
+									<div id="f-two">Angel</div>
+									<div id="f-three">
+										<img src="img/xingbie.png" style="width: 15px;height: 15px;"/>18
+									</div>
+									<div id="f-four">
+										<img src="img/mtwo.jpg" style="width: 300px;height: 260px;border-radius: 10px;"/>
+									</div>
+									<div id="f-five">
+										2019-10-16
+									</div>
+									<div id="f-six">
+										<div id="six-one">
+											<a href="###" style="color: black;"><img src="img/da.png" style="width: 25px;height: 30px;padding-top: 10px;"/>打赏</a>
+										</div>
+										<div id="six-two">
+											<a href="###" style="color: black;"><img src="img/lun.png" style="width: 15px;height: 25px;padding-top: 10px;"/>评论</a>
+										</div>
+										<div id="six-three">
+											<a href="###" style="color: black;"><img src="img/bi.png" style="width: 30px;height: 30px;padding-top: 10px;"/>点赞</a>
+										</div>
+									</div>
+								</div>-->
+								
+							</div>
+						</div>
+					</div>
+					<div id="item2mobile" class="mui-slider-item mui-control-content">
+						<div class="mui-scroll-wrapper">
+							<div class="mui-scroll" id="pyqbox">
+								
+							</div>
+						</div>
+					</div>
+					<div id="item3mobile" class="mui-slider-item mui-control-content">
+						<div class="mui-scroll-wrapper">
+							<div class="mui-scroll" id="listbox2">
+								
+								
+							</div>
+						</div>
+					</div>
+					<div id="item4mobile" class="mui-slider-item mui-control-content">
+						<div class="mui-scroll-wrapper">
+							<div class="mui-scroll" id="listbox3">
+								
+								
+							</div>
+						</div>
+					</div>
+					<div id="item5mobile" class="mui-slider-item mui-control-content">
+						<div class="mui-scroll-wrapper">
+							<div class="mui-scroll" id="listbox4">
+								
+								
+							</div>
+						</div>
+					</div>
+					<div id="item6mobile" class="mui-slider-item mui-control-content">
+						<div class="mui-scroll-wrapper">
+							<div class="mui-scroll" id="listbox5">
+								
+								
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+		
+		<script src="js/mui.js" type="text/javascript" charset="utf-8"></script>
+		<script src="js/jquery-1.11.0.min.js" type="text/javascript" charset="utf-8"></script>
+		<script type="text/javascript">
+			   mui("#tabbox").on("tap","a.mui-tab-item",function(e){
+			    	e.preventDefault();
+			    	var that=this;
+			    	var currenturl=that.href;
+			    	mui.openWindow({
+			    		url:currenturl,
+			    		id:currenturl
+			    	});
+			    	
+			    });
+			 mui.init({
+	          gestureConfig:{
+	           longtap: true //默认为false
+	          }
+	       });
+	       
+	       
+	       function getdata(typeid){
+	       		var requrl="http://192.168.43.128:8080/myshop/JavaApi";
+//				console.log(requrl);
+				console.log(typeid);
+				mui.ajax(requrl,{
+						data:{
+							rnum:"2",
+							typeid:typeid
+						},
+						dataType:'json',//服务器返回json格式数据
+						type:'post',//HTTP请求类型
+						timeout:10000,//超时时间设置为10秒；
+						headers:{'Content-Type':'application/x-www-form-urlencoded'},
+						success:function(data){
+							console.log(JSON.stringify(data));
+							var itembox = document.getElementById("listbox"+typeid);
+							console.log(JSON.stringify(data));
+							for (var i=0;i<data.length;i++) 
+							{
+								var el = document.createElement('div');
+								el.className = 'four';								
+								var innerhtmlstr="<div class=\"f-one\">";								
+								innerhtmlstr+="<img src=\"http://192.168.43.128:8080/myshop/upload/"+data[i].touxiang+"\"  style=\"width: 50px;height: 50px;border-radius: 10px;\"/>";
+								innerhtmlstr+="</div>";
+								innerhtmlstr+="<div class=\"f-two\">"+data[i].nicheng+"</div>";
+								innerhtmlstr+="<div class=\"f-three\">";
+								innerhtmlstr+="<img src=\"http://192.168.43.128:8080/myshop/upload/"+data[i].sex+"\" style=\"width: 15px;height: 15px;\"/>"+data[i].yearold+"";
+								innerhtmlstr+="</div>";
+								innerhtmlstr+="<div class=\"f-four\">";
+								innerhtmlstr+="<img src=\"http://192.168.43.128:8080/myshop/upload/"+data[i].dongtai+"\" style=\"width: 300px;height: 260px;border-radius: 10px;\"/>";
+								innerhtmlstr+="</div>";
+								innerhtmlstr+="<div class=\"f-five\">"+data[i].fbtime+"</div>";
+								innerhtmlstr+="<div class=\"f-six\">";
+								innerhtmlstr+="<div class=\"six-one\">";
+								innerhtmlstr+="<a href=\"###\" style=\"color: black;\"><img src=\"img/da.png\" style=\"width: 25px;height: 30px;padding-top: 10px;\"/>打赏</a>";
+								innerhtmlstr+="</div>";
+								innerhtmlstr+="<div class=\"six-two\">";								
+								innerhtmlstr+="<a href=\"###\" style=\"color: black;\"><img src=\"img/lun.png\" style=\"width: 15px;height: 25px;padding-top: 10px;\"/>评论</a>";
+								innerhtmlstr+="</div>";
+								innerhtmlstr+="<div class=\"six-three\">";
+								innerhtmlstr+="<a href=\"###\" style=\"color: black;\"><img src=\"img/bi.png\" style=\"width: 30px;height: 30px;padding-top: 10px;\"/>点赞</a>";
+								innerhtmlstr+="</div>";
+								innerhtmlstr+="</div>";
+								innerhtmlstr+="</div>";
+								el.innerHTML =innerhtmlstr;
+								//'<a href="javascript:void(0);">' + data[i].title+ '</a>';
+								el.id=data[i].id;
+//								console.log(typeid);
+								itembox.insertBefore(el,itembox.firstChild);//新纪录插到最前面；
+							}
+//							console.log(itembox.innerHTML);
+							typeid++;
+							if(typeid<6)
+							{
+								getdata(typeid);
+							}
+						}
+				});
+	       	
+	       	
+	       }
+	       
+	        mui.ready(function(){
+				getdata(1);
+				
+				mui("#itembox").on("tap","li",function(){
+					var currentid=this.id;
+					mui.openWindow({
+				    	url:"xingzuoview.html",
+				    	id:"xingzuoview",
+				    	extras:{
+						   newsid:currentid
+						},
+					});
+					
+				});
+				
+				
+				
+			});
+			//页面刷新完毕后执行的函数
+	        mui.plusReady(function(){
+	        	//Ajax请求
+				mui.ajax("http://192.168.43.128:8080/myshop/JavaApi", {
+					
+					data: {
+						rnum: "8"
+					},
+					dataType: 'json', //服务器返回json格式数据
+					type: 'post', //HTTP请求类型
+					timeout: 10000, //超时时间设置为10秒；
+					headers: { 'Content-Type': 'application/x-www-form-urlencoded' },
+					success: function(data) {
+						console.log(JSON.stringify(data));
+						for (var i=0;i<data.length;i++) {
+							var s="";
+//							
+							s+="<div class='f-one'>";
+							s+="<img src='img/cbd.jpg' style='width: 50px;height: 50px;border-radius: 10px;'/>"
+							s+="</div>";
+							s+="<div class='f-two'>Angel</div>";
+							s+="<div class='f-three'>";
+							s+="<img src='img/xingbienv.png' style='width: 15px;height: 15px;'/>";
+							s+="18";
+							s+="</div>";
+							s+="<div class='f-content'>"+data[i].content+"</div>";
+							s+="<div class='f-four'><img src='http://192.168.43.128:8080/myshop/upload/"+data[i].imgurl+"' style='width: 300px;height: 260px;border-radius: 10px;'/></div>";
+							s+="<div class='f-five'>"+data[i].createtime+"</div>";
+							s+="<div class=\"f-six\">";
+							s+="<div class=\"six-one\">";
+							s+="<a href=\"###\" style=\"color: black;\"><img src=\"img/da.png\" style=\"width: 25px;height: 30px;padding-top: 10px;\"/>打赏</a>";
+							s+="</div>";
+							s+="<div class=\"six-two\">";								
+							s+="<a href=\"###\" style=\"color: black;\"><img src=\"img/lun.png\" style=\"width: 15px;height: 25px;padding-top: 10px;\"/>评论</a>";
+							s+="</div>";
+							s+="<div class=\"six-three\">";
+							s+="<a href=\"###\" style=\"color: black;\"><img src=\"img/bi.png\" style=\"width: 30px;height: 30px;padding-top: 10px;\"/>点赞</a>";
+							s+="</div>";
+							s+="</div>";
+							s+="</div>";
+							document.getElementById("pyqbox").innerHTML+=s;
+						}
+					},
+					error:function(){
+						console.log("ajax请求失败");
+					}
+				});
+	        })
+	        
+	        // 搜索事件,获取搜索关键词
+	        function enterSearch(event){
+	            if(event.keyCode == 13) {//用户点击回车的事件号为13
+	                var keyword = document.getElementById('searchInput').value;
+	                alert(keyword);
+	            }
+	        }
+			
+			
+	        window.onload=function(){
+				var arr = document.getElementsByClassName("slide");
+				for(var i=0;i<arr.length;i++){
+					arr[i].style.left = i*340+"px";
+				}
+			}
+			function LeftMove(){
+				var arr = document.getElementsByClassName("slide");//获取三个子div
+				for(var i=0;i<arr.length;i++){
+					var left = parseFloat(arr[i].style.left);
+					left-=2;
+					var width =340;//图片的宽度
+					if(left<=-width){
+						left=(arr.length-1)*width;//当图片完全走出显示框，拼接到末尾
+						clearInterval(moveId);
+					}
+					arr[i].style.left = left+"px";
+				}
+			}
+			function divInterval(){
+				moveId=setInterval(LeftMove,10);//设置一个10毫秒定时器
+			}
+			
+			
+			timeId=setInterval(divInterval,5000);//设置一个3秒的定时器。
+			
+			function stop(){
+				clearInterval(timeId);
+			}
+			function start(){
+				clearInterval(timeId);
+				timeId=setInterval(divInterval,5000);
+			}
+			
+			//页面失去焦点停止
+			onblur = function(){
+				stop();
+			}
+			//页面获取焦点时开始
+			onfocus = function(){
+				start();
+			}
+            
+//			(function($) {
+//				//阻尼系数
+//				var deceleration = mui.os.ios?0.003:0.0009;
+//				$('.mui-scroll-wrapper').scroll({
+//					bounce: false,
+//					indicators: true, //是否显示滚动条
+//					deceleration:deceleration
+//				});
+//				$.ready(function() {
+//					//循环初始化所有下拉刷新，上拉加载。
+//					$.each(document.querySelectorAll('.mui-slider-group .mui-scroll'), function(index, pullRefreshEl) {
+//						$(pullRefreshEl).pullToRefresh({
+//							down: {
+//								callback: function() {
+//									var self = this;
+//									setTimeout(function() {
+//										var ul = self.element.querySelector('.mui-table-view');
+//										ul.insertBefore(createFragment(ul, index, 10, true), ul.firstChild);
+//										self.endPullDownToRefresh();
+//									}, 1000);
+//								}
+//							},
+//							up: {
+//								callback: function() {
+//									var self = this;
+//									setTimeout(function() {
+//										var ul = self.element.querySelector('.mui-table-view');
+//										ul.appendChild(createFragment(ul, index, 5));
+//										self.endPullUpToRefresh();
+//									}, 1000);
+//								}
+//							}
+//						});
+//					});
+//					var createFragment = function(ul, index, count, reverse) {
+//						var length = ul.querySelectorAll('li').length;
+//						var fragment = document.createDocumentFragment();
+//						var li;
+//						for (var i = 0; i < count; i++) {
+//							li = document.createElement('li');
+//							li.className = 'mui-table-view-cell';
+//							li.innerHTML = '第' + (index + 1) + '个选项卡子项-' + (length + (reverse ? (count - i) : (i + 1)));
+//							fragment.appendChild(li);
+//						}
+//						return fragment;
+//					};
+//				});
+//			})(mui);
+					
+//		    var searchF = document.querySelector('#searchForm').offsetHeight,  //头部高度  
+//              scrolled = document.getElementById('scroll1'),   //目标元素  
+//              slidered = document.getElementById('sliderSegmentedControl'); // 浮动元素，默认隐藏，当然也可以直接浮动目标元素  
+//
+//          window.addEventListener('scroll', function(e) {  
+//              //原理：滚动时判断固定元素的top距离头部的位置  
+//              if(himall.hasClass(slidered, 'hidden')) {  
+//                  if(scrolled.getBoundingClientRect().top <= searchF) {  
+//                      himall.removeClass(slidered, ' hidden');  
+//                  }  
+//              }else if(!himall.hasClass(slidered, 'hidden')){  
+//                  if(scrolled.getBoundingClientRect().top >= searchF){  
+//                      slidered.className += ' hidden';  
+//                  }  
+//              }  
+//          });
+            
+            
+            
+            
+        
+		</script>
+	</body>
+
+</html>

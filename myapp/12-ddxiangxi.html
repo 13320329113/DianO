@@ -1,0 +1,185 @@
+<!doctype html>
+<html>
+
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+		<meta name="viewport" content="width=device-width,initial-scale=1,minimum-scale=1,maximum-scale=1,user-scalable=no" />
+		<link href="css/mui.min.css" rel="stylesheet" />
+		<style type="text/css">
+			.mui-action-back{
+				color: black;
+			}
+			
+			.mui-title{
+				color: black;
+				
+			}
+			* {
+				margin: 0;
+				padding: 0;
+			}
+			
+			body {
+				position: relative;
+			}
+			
+			.mui-card {
+				width: 100%;
+				height: 90px;
+				position: absolute;
+				top: 5px;
+				position: relative;
+			}
+			
+			#tx {
+				position: relative;
+			}
+			
+			#ID {
+				position: absolute;
+				left: 65px;
+				font-family: "微软雅黑";
+				font-size: 20px;
+			}
+			
+			#JG {
+				font-size: 20px;
+				color: crimson;
+				font-family: "微软雅黑";
+				position: absolute;
+				left: 65px;
+				top: 40px;
+			}
+			
+			.mui-btn {
+				font-size: 16px;
+				padding: 8px;
+				margin: 3px;
+			}
+			
+			.mui-navigate-right {
+				width: 100%;
+				position: relative;
+			}
+			
+			#Game1 {
+				position: absolute;
+				right: 10px;
+				top: 10px;
+				float: left;
+			}
+			#Game2 {
+				position: absolute;
+				right: 10px;
+				top: 10px;
+				float: left;
+			}
+			.mui-numbox {
+				position: absolute;
+				right: 10px;
+				top: 4px;
+				float: left;
+			}
+			#Game4 {
+				position: absolute;
+				right: 10px;
+				top: 10px;
+				float: left;
+			}
+			
+			#DDJM {
+				width: 100%;
+				height: 50px;
+				position: relative;
+			}
+			
+			#TJDD {
+				width: 200px;
+				height: 50px;
+				border-radius: 50px;
+				background-color: saddlebrown;
+				color: white;
+				font-family: "微软雅黑";
+				font-size: 18px;
+				position: absolute;
+				left: 90px;
+				top: -20px;
+			}
+			
+			
+		</style>
+	</head>
+
+	<body>
+		
+		<header class="mui-bar mui-bar-nav">
+		    <a class="mui-action-back mui-icon mui-icon-left-nav mui-pull-left"></a>
+		    <h1 class="mui-title">确认订单</h1>
+		</header>
+		
+		<div class="mui-content">
+			<div class="mui-card">
+				<div class="mui-card-content">
+					<div class="mui-card-content-inner">
+						<div id="tx">
+							<img src="img/i.jpg" style="width: 60px; height: 60px;border-radius: 10px;" />
+							<span id="ID">他说我很像她</span>
+							<span id="JG">35.00币/局</span>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+		   
+		   <div id="XZ">
+		   <ul>
+				<li class="mui-table-view-cell">
+					<span class="mui-navigate-right"><p>购买信息</p></span>
+					<span id="Game1">游戏</span>
+				</li>
+				<li class="mui-table-view-cell">
+					<span class="mui-navigate-right"><p>服务时间</p></span>
+					<span id="Game2">1</span>
+				</li>
+				<li class="mui-table-view-cell">
+					<span class="mui-navigate-right"><p>单数</p></span>
+					<span id="Game1">1</span>
+				</li>
+				
+				<li class="mui-table-view-cell">
+					<span class="mui-navigate-right"><p>优惠</p></span>
+					<span id="Game4">1</span>
+				</li>
+			</ul>
+		       
+		     <div class="mui-input-row" style="margin: 10px 5px;">
+			<textarea id="textarea" rows="5" placeholder="备注"></textarea>
+		</div>
+		<div id="DDJM">
+			<input type="button" name="TJDD" id="TJDD" value="确认订单" />
+		</div>
+		</div>
+		   
+		   
+		    
+		    
+		</div>
+		
+		
+		<script src="js/mui.min.js"></script>
+		<script src="js/jquery-1.11.0.js" type="text/javascript" charset="utf-8"></script>
+		<script type="text/javascript">
+			mui.init()
+//			$("#TJDD").click(function(){
+//				mui.alert("下单成功")
+//			})
+			document.getElementById("TJDD").addEventListener("tap",function(){
+    	mui.openWindow({
+    		url:"shoukuan.html"
+    	});
+    });
+		</script>
+	</body>
+
+</html>

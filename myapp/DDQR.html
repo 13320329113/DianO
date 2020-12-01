@@ -1,0 +1,259 @@
+<!doctype html>
+<html>
+
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+		<meta name="viewport" content="width=device-width,initial-scale=1,minimum-scale=1,maximum-scale=1,user-scalable=no" />
+		<meta name="apple-mobile-web-app-capable" content="yes">
+		<meta name="apple-mobile-web-app-status-bar-style" content="black">
+		<link href="css/mui.min.css" rel="stylesheet" />
+		<link href="css/mui.picker.css" rel="stylesheet" />
+		<link href="css/mui.poppicker.css" rel="stylesheet" />
+		<link rel="stylesheet" type="text/css" href="css/app.css" />
+		<link rel="stylesheet" href="css/mui.min.css">
+		<link rel="stylesheet" type="text/css" href="css/mui.picker.min.css" />
+		<style type="text/css">
+			.mui-action-back{
+				color: black;
+			}
+			
+			.mui-title{
+				color: black;
+				
+			}
+			* {
+				margin: 0;
+				padding: 0;
+			}
+			
+			body {
+				position: relative;
+			}
+			
+			.mui-card {
+				width: 100%;
+				height: 90px;
+				position: absolute;
+				top: 5px;
+				position: relative;
+			}
+			
+			#tx {
+				position: relative;
+			}
+			
+			#ID {
+				position: absolute;
+				left: 65px;
+				font-family: "微软雅黑";
+				font-size: 20px;
+			}
+			
+			#JG {
+				font-size: 20px;
+				color: crimson;
+				font-family: "微软雅黑";
+				position: absolute;
+				left: 65px;
+				top: 40px;
+			}
+			
+			.mui-btn {
+				font-size: 16px;
+				padding: 8px;
+				margin: 3px;
+			}
+			
+			.mui-navigate-right {
+				width: 100%;
+				position: relative;
+			}
+			
+			#Game1 {
+				position: absolute;
+				right: 10px;
+				top: 10px;
+				float: left;
+			}
+			
+			#date {
+				position: absolute;
+				right: 10px;
+				top: 10px;
+				float: left;
+			}
+			
+			#Game3 {
+				position: absolute;
+				right: 5px;
+				top: 4px;
+				float: left;
+			}
+			
+			.mui-numbox {
+				position: absolute;
+				right: 10px;
+				top: 4px;
+				float: left;
+			}
+			
+			#Game4 {
+				position: absolute;
+				right: 10px;
+				top: 10px;
+				float: left;
+			}
+			
+			#DDJM {
+				width: 100%;
+				height: 50px;
+				position: relative;
+			}
+			
+			#TJDD {
+				width: 200px;
+				height: 50px;
+				border-radius: 50px;
+				background-color: saddlebrown;
+				color: white;
+				font-family: "微软雅黑";
+				font-size: 18px;
+				position: absolute;
+				left: 80px;
+				top: -20px;
+			}
+		
+		</style>
+	</head>
+
+	<body>
+		<header class="mui-bar mui-bar-nav">
+			<a class="mui-action-back mui-icon mui-icon-left-nav mui-pull-left"></a>
+			<h1 class="mui-title">订单确认</h1>
+		</header>
+		<div class="mui-content">
+			<div class="mui-card">
+				<div class="mui-card-content">
+					<div class="mui-card-content-inner">
+						<div id="tx">
+							<img src="img/c1dea509f8bb42fe9a1719c891abc469!400x400.jpeg" style="width: 60px; height: 60px;border-radius: 10px;" />
+							<span id="ID">娇娇彩虹六号</span>
+							<span id="JG">35.00币/局</span>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+		<div id="XZ">
+			<ul>
+				<li class="mui-table-view-cell">
+					<span class="mui-navigate-right"><p>购买信息</p></span>
+					<span id="Game1">购买技能</span>
+				</li>
+				<li class="mui-table-view-cell">
+					<span class="mui-navigate-right"><p>服务时间</p></span>
+					<span id="date">选择时间</span>
+				</li>
+				
+				<li class="mui-table-view-cell">
+					<span class="mui-navigate-right"><p>优惠</p></span>
+					<span id="Game4">暂无优惠</span>
+				</li>
+			</ul>
+		</div>
+		<div class="mui-input-row" style="margin: 10px 5px;">
+			<textarea id="textarea" rows="5" placeholder="备注"></textarea>
+		</div>
+		<div id="DDJM">
+			
+			<input type="button" name="TJDD" id="TJDD" value="提交订单" />
+			
+		</div>
+		<script src="js/mui.js"></script>
+		<script src="js/mui.picker.js"></script>
+		<script src="js/mui.poppicker.js"></script>
+		<script src="js/city.data.js" type="text/javascript" charset="utf-8"></script>
+		<script src="js/city.data-3.js" type="text/javascript" charset="utf-8"></script>
+		<script src="js/mui.min.js"></script>
+		<script src="js/mui.picker.min.js"></script>
+		<script src="js/jquery-1.11.0.js" type="text/javascript" charset="utf-8"></script>
+		<script type="text/javascript">
+			(function($, doc) {
+				$.init();
+				$.ready(function() {
+					//普通示例
+					var userPicker = new $.PopPicker();
+					userPicker.setData([{
+						value: 'wzry',
+						text: '王者荣耀'
+					}, {
+						value: 'jdqs',
+						text: '绝地求生'
+					}, {
+						value: 'lol',
+						text: '英雄联盟'
+					}, {
+						value: 'hpjy',
+						text: '和平精英 '
+					}, {
+						value: 'wzq',
+						text: '五子棋'
+					}, {
+						value: 'ydzy',
+						text: '云顶之弈'
+					}, {
+						value: 'CS',
+						text: 'CS：GO'
+					}, {
+						value: 'swxf',
+						text: '守望先锋'
+					}, {
+						value: 'chlh',
+						text: '彩虹六号：围攻'
+					}, {
+						value: 'cf',
+						text: '穿越火线'
+					}]);
+
+					var showUserPickerButton = doc.getElementById('Game1');
+					var userResult = doc.getElementById('Game1');
+					showUserPickerButton.addEventListener('tap', function(event) {
+						userPicker.show(function(items) {
+							userResult.innerText = items[0].text;
+							//返回 false 可以阻止选择框的关闭
+							//return false;
+						});
+					}, false);
+					//-----------------------------------------
+					//级联示例
+
+				});
+			})(mui, document);
+
+			mui.init();
+			var date = document.querySelector('#date');
+			var dtPicker = new mui.DtPicker({
+				type:'date'
+			}); 
+			// 监听日期选择点击事件
+			date.addEventListener('tap', function() {
+				dtPicker.show(function (selectItems) { 
+				   date.innerHTML=selectItems.value;
+				})
+			}, false);
+//			$('#TJDD').click(function(){
+//				mui.alert("下单成功");
+//			});
+			
+			document.getElementById("TJDD").addEventListener("tap",function(){
+    	mui.openWindow({
+    		url:"shoukuan.html"
+    	});
+    });
+
+		</script>
+
+	</body>
+
+</html>

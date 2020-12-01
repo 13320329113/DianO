@@ -1,0 +1,275 @@
+<!doctype html>
+<html>
+
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+		<meta name="viewport" content="width=device-width,initial-scale=1,minimum-scale=1,maximum-scale=1,user-scalable=no" />
+		<link href="css/mui.min.css" rel="stylesheet" />
+		<style type="text/css">
+			html,body{
+				margin: 0 auto;
+				background-color: white;
+			}
+			.mui-action-back{
+				color: black;
+			}
+			.mui-bar{
+				background: white;
+				box-shadow: none;
+				border: none;
+				
+			}
+			.mui-title{
+				color: black;
+				
+			}
+			.mui-content{
+    		background-color: white;
+    	}
+			*{
+				margin: 0;
+				padding: 0;
+			}
+			html,body{
+				width: 100%;
+				height: 100%;
+				background-color: white;
+			}
+			
+			.mui-action-back{
+				color: black;
+			}
+			.mui-bar{
+				background-color: white;
+				border-bottom: solid #eee 2px;
+			}
+			.mui-content{
+				
+				width: 95%;
+				height: 100%;
+				position: relative;
+				left: 2.5%;
+				background-color: white;
+				opacity: 0.8;
+			}
+			#box1{
+				/*position: absolute;*/
+				height: 25%;
+				background-color: lightskyblue;
+				border-radius: 10px;
+				background-image: linear-gradient(to right,lightskyblue,dodgerblue);
+			}
+			#box2{
+				
+				height: 25%;
+				background-color: crimson;
+				border-radius: 10px;
+				background-image: linear-gradient(to right,orange,crimson);
+			}
+			#box3{
+				
+				height: 13%;
+				background-color: hotpink;
+				border-radius: 10px;
+				background-image: linear-gradient(to right,hotpink,fuchsia);
+				
+			}
+			p{
+				color: black;
+				font-size: 17px;
+				margin-top: 20px;
+				margin-bottom: 20px;
+			}
+			.zuo{
+				width: 20%;
+				height: 100%;
+				/*background-color: white;*/
+				float: left;
+				position: relative;
+				/*background-image: url(image/001.jpg);*/
+				
+			}
+			.you{
+				width: 20%;
+				height: 100%;
+				/*background-color: gold;*/
+				float: right;
+				text-align: center;
+				padding-top: 10px;
+				font-size: 23px;
+				position: relative;
+				color: white;
+			}
+			.zhong{
+				width: 60%;
+				height: 100%;
+				/*background-color: red;*/
+				float: left;
+				/*margin-left: 45px;*/
+				color: white;
+				/*padding-top: 10px;*/
+			}
+			.bufen {
+				height: 50%;
+			}
+			.dazi{
+				padding-top: 13px;
+				padding-bottom: 5px;
+			}
+			.xiaozi{
+				font-size: 15px;
+				color: #DDDDDD;
+				
+				margin-top: 20px;
+				
+			}
+			.chongzhi{
+				width: 70%;
+				height: 25px;
+				background-color: darkblue;
+				color: dodgerblue;
+				background-color: white;
+				font-size: 14px;
+				text-align: center;
+				line-height: 25px;
+				border-radius: 13px;
+				margin-top: 15px;
+				position: absolute;
+				right: 15%;
+			}
+			img{
+				width: 60%;
+				height: 60%;
+				border-radius: 30px;
+				position: absolute;
+				top: 20%;
+				left: 20%;
+			}
+			.dandu{
+				border-bottom: solid 0.2px orange;
+			}
+			.yhq{
+				height: 100%;
+				/*background-color: firebrick;*/
+				/*border-bottom: solid 0.1px lightskyblue;*/
+			}
+			.sbg{
+				border-bottom: solid 0.1px lightskyblue;
+			}
+			.xbg .dazi{
+				padding-bottom: 13px;
+				
+			}
+			.jiantou{
+				width: 70%;
+				height: 20px;
+				margin-top: 15px;
+				position: absolute;
+				right: 15%;
+			}
+		</style>
+	</head>
+
+	<body>
+		<header class="mui-bar mui-bar-nav">
+		    <a class="mui-action-back mui-icon mui-icon-left-nav mui-pull-left"></a>
+		    <h1 class="mui-title">我的钱包</h1>
+		</header>
+		
+		<div class="mui-content">
+			<p><strong>我的余额</strong></p>
+		    <div id="box1">
+		    	<div class="bufen sbg">
+		    		<span class="zuo">
+		    			<img src="image/001.png" />
+		    		</span>
+		    		<span class="zhong">
+		    		<div class="dazi">金币</div>
+		    			<span class="xiaozi">用于在订单，消息/动态打赏等消费场景</span>
+		    		
+		    		</span>
+		    		<span class="you">
+		    			0.00
+		    			<a href="shoukuan.html"><div class="chongzhi">充值</div></a>
+		    		</span>
+		    	</div>
+		    	<div class="bufen xbg">
+		    		<span class="zuo">
+		    			<img src="image/003.png" />
+		    		</span>
+		    		<span class="zhong">
+		    		<div class="dazi">钻石</div>
+		    			<span class="xiaozi">用于在聊天室中打赏</span>
+		    		
+		    		</span>
+		    		<span class="you">
+		    			0.00
+		    			<a href="shoukuan.html"><div class="chongzhi">充值</div></a>
+		    		</span>
+		    	</div>
+		    </div>
+		    
+		   <p><strong>我的收入</strong></p>
+		    <div id="box2">
+		    	<div class="bufen dandu xbg">
+		    		<span class="zuo">
+		    			<img src="image/002.png" />
+		    		</span>
+		    		<span class="zhong">
+		    		<div class="dazi">金币收入</div>
+		    			<span class="xiaozi">收益明细</span>
+		    		
+		    		</span>
+		    		<span class="you">
+		    			0.00
+		    			<div class="jiantou">
+		    				<img src="image/006.png"/>
+		    			</div>
+		    		</span>
+		    	</div>
+		    	<div class="bufen xbg">
+		    		<span class="zuo">
+		    			<img src="image/004.png" />
+		    		</span>
+		    		<span class="zhong">
+		    		<div class="dazi">魅力值</div>
+		    			<span class="xiaozi">提现、兑换、收益明细</span>
+		    		
+		    		</span>
+		    		<span class="you">
+		    			0
+		    			<div class="jiantou">
+		    				<img src="image/006.png"/>
+		    			</div>
+		    		</span>
+		    	</div>
+		    </div>
+		    
+		   <p><strong>优惠券</strong></p>
+		    <div id="box3">
+		    	<div class="bufen yhq xbg">
+		    		<span class="zuo">
+		    			<img src="image/005.png" />
+		    		</span>
+		    		<span class="zhong">
+		    		<div class="dazi">优惠券</div>
+		    			<span class="xiaozi">在有限期间内，下单有优惠</span>
+		    		
+		    		</span>
+		    		<span class="you">
+		    			0.00
+		    			<div class="jiantou">
+		    				<img src="image/006.png"/>
+		    			</div>
+		    		</span>
+		    	</div>
+		    </div>
+		</div>
+		<script src="js/mui.min.js"></script>
+		<script type="text/javascript">
+			mui.init()
+		</script>
+	</body>
+
+</html>

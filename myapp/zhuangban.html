@@ -1,0 +1,522 @@
+<!doctype html>
+<html>
+
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+		<meta name="viewport" content="width=device-width,initial-scale=1,minimum-scale=1,maximum-scale=1,user-scalable=no" />
+		<link href="css/mui.min.css" rel="stylesheet" />
+		<style type="text/css">
+			* {
+				margin: 0;
+				padding: 0;
+			}
+			
+			html,
+			body {
+				width: 100%;
+				height: 100%;
+				margin: 0 auto;
+				background-color: #381C71;
+			}
+			
+			.mui-action-back{
+				color: white;
+			}
+			.mui-bar{
+				background: none;
+				box-shadow: none;
+				
+			}
+			.mui-title{
+				color: white;
+			}
+			
+			.guding{
+				width: 100%;
+				height: 220px ;
+				background-color: #381C71;
+				z-index: 2;
+				position: fixed;
+				top: 0px;
+				border-bottom-right-radius: 50px;
+				border-bottom-left-radius: 50px;
+			}
+			@-webkit-keyframes myfirst{
+				from{box-shadow: 0px 0px 30px 3px purple;}
+				to{box-shadow: 0px 0px 30px 3px pink;}
+			}
+			.texiao {
+				/*position: absolute;
+				*/
+				left: calc(50% - 180px);
+				width: 360px;
+				height: 100px;
+				padding-top: 5px;
+				background-image: url(img/043.png);
+				border-radius: 20px;
+				position: fixed;
+				top: 80px;
+				box-shadow: 0px 0px 30px 3px gold;
+				/*opacity: 0.8;*/
+				z-index: 1;
+				-webkit-animation: myfirst 0.8s linear 2s infinite alternate;
+			}
+			
+			.dazi {
+				/*background-color: red;*/
+				width: 130px;
+				height: 30px;
+				text-align: center;
+				line-height: 30px;
+				font-size: 20px;
+				font-family: "微软雅黑";
+				color: white;
+				margin-left: 20px;
+				margin-top: 20px;
+			}
+			
+			.xiaozi {
+				/*background-color: darkblue;*/
+				width: 110px;
+				height: 25px;
+				text-align: center;
+				line-height: 25px;
+				font-family: "微软雅黑";
+				color: white;
+				margin-left: 20px;
+			}
+			.mainbox{
+				position: absolute;
+				width: 100%;
+				height: 100%;
+				top: 160px;
+				background-color: white;
+				padding-top: 80px;
+				/*border-top-left-radius: 20px;
+				border-top-right-radius: 20px;*/
+			}
+			.big{
+				width: 100px;
+				height: 120px;
+				/*background-color: red;*/
+				text-align: center;
+				float: left;
+				margin-left: calc(25% - 75px);
+				margin-bottom: 20px;
+			}
+			.small{
+				
+				width: 80px;
+				height: 80px;
+				margin: auto;
+				/*margin-top: 20px;*/
+				background-color: #eee;
+				border-radius: 20px;
+			}
+			.small img{
+				width: 50px;
+				width: 50px;
+				margin: 15px;
+			}
+			.wenzi{
+				height: 40;
+				line-height: 40px;
+				font-size: 14px;
+			}
+			.modal {
+				display: none;
+				/* 默认隐藏 */
+				position: fixed;
+				/* 固定定位 */
+				z-index: 1;
+				/* 设置在顶层 */
+				left: 0;
+				top: 0;
+				width: 100%;
+				height: 100%;
+				overflow: auto;
+				background-color: rgb(0, 0, 0);
+				background-color: rgba(0, 0, 0, 0.4);
+			}
+			/* 弹窗内容 */
+			
+			.modal-content {
+				background-color: white;
+				margin: 60% auto;
+				padding: 20px;
+				border: 1px solid #888;
+				width: 80%;
+				border-radius: 20px;
+			}
+			
+			.tutu img{
+				
+				margin-bottom: 20px;
+				width: 80px;
+				height: 80px;
+			}
+			.zizi{
+				font-size: 20px;
+				margin-bottom: 20px;
+			}
+		</style>
+	</head>
+
+	<body>
+		<header class="mui-bar mui-bar-nav myhead">
+			<a class="mui-action-back mui-icon mui-icon-left-nav mui-pull-left"></a>
+			<h1 class="mui-title">主页装扮</h1>
+		</header>
+	<div class="guding">
+		
+		<div class="texiao">
+
+			<div class="dazi">
+				我的主页特效
+			</div>
+			<div class="xiaozi">
+				当前装扮：无
+			</div>
+			
+		</div>
+	</div>
+		<!--主体开始-->
+		<div class="mainbox">
+			<div class="big" id="myBtn1">
+				<div class="small"><img src="img/044.png"/></div>
+				<div class="wenzi">
+					零食购物车
+				</div>
+				<!-- 弹窗 -->
+				<div id="myModal1" class="modal">
+
+					<!-- 弹窗内容 -->
+					<div class="modal-content">
+						<div class="tutu">
+							<img src="img/044.png" />
+						</div>
+						<div class="zizi">VIP专属哦！亲~</div>
+						
+					</div>
+
+				</div>
+				<!--弹窗结束-->
+			</div>
+			
+			<div class="big" id="myBtn2">
+				<div class="small"><img src="img/045.png"/></div>
+				<div class="wenzi">
+					萌妹购物车
+				</div>
+				<!-- 弹窗 -->
+				<div id="myModal2" class="modal">
+
+					<!-- 弹窗内容 -->
+					<div class="modal-content">
+						<div class="tutu">
+							<img src="img/045.png" />
+						</div>
+						<div class="zizi">VIP专属哦！亲~</div>
+						
+					</div>
+
+				</div>
+				<!--弹窗结束-->
+			</div>
+			
+			<div class="big" id="myBtn3">
+				<div class="small"><img src="img/046.png"/></div>
+				<div class="wenzi">
+					天蝎流星雨
+				</div>
+				<!-- 弹窗 -->
+				<div id="myModal3" class="modal">
+
+					<!-- 弹窗内容 -->
+					<div class="modal-content">
+						<div class="tutu">
+							<img src="img/046.png" />
+						</div>
+						<div class="zizi">VIP专属哦！亲~</div>
+						
+					</div>
+
+				</div>
+				<!--弹窗结束-->
+			</div>
+			
+			<div class="big" id="myBtn4">
+				<div class="small"><img src="img/046.png"/></div>
+				<div class="wenzi">
+					天蝎流星雨体验
+				</div>
+				<!-- 弹窗 -->
+				<div id="myModal4" class="modal">
+
+					<!-- 弹窗内容 -->
+					<div class="modal-content">
+						<div class="tutu">
+							<img src="img/046.png" />
+						</div>
+						<div class="zizi">已经换上啦！快去看看~</div>
+						
+					</div>
+
+				</div>
+				<!--弹窗结束-->
+			</div>
+			
+			<div class="big" id="myBtn5">
+				<div class="small"><img src="img/047.png"/></div>
+				<div class="wenzi">
+					天秤流星雨
+				</div>
+				<!-- 弹窗 -->
+				<div id="myModal5" class="modal">
+
+					<!-- 弹窗内容 -->
+					<div class="modal-content">
+						<div class="tutu">
+							<img src="img/047.png" />
+						</div>
+						<div class="zizi">VIP专属哦！亲~</div>
+						
+					</div>
+
+				</div>
+				<!--弹窗结束-->
+			</div>
+			
+			<div class="big" id="myBtn6">
+				<div class="small"><img src="img/048.png"/></div>
+				<div class="wenzi">
+					处女流星雨
+				</div>
+				<!-- 弹窗 -->
+				<div id="myModal6" class="modal">
+
+					<!-- 弹窗内容 -->
+					<div class="modal-content">
+						<div class="tutu">
+							<img src="img/048.png" />
+						</div>
+						<div class="zizi">VIP专属哦！亲~</div>
+						
+					</div>
+
+				</div>
+				<!--弹窗结束-->
+			</div>
+			
+			<div class="big" id="myBtn7">
+				<div class="small"><img src="img/049.png"/></div>
+				<div class="wenzi">
+				狮子流星雨
+				</div>
+				<!-- 弹窗 -->
+				<div id="myModal7" class="modal">
+
+					<!-- 弹窗内容 -->
+					<div class="modal-content">
+						<div class="tutu">
+							<img src="img/049.png" />
+						</div>
+						<div class="zizi">VIP专属哦！亲~</div>
+						
+					</div>
+
+				</div>
+				<!--弹窗结束-->
+			</div>
+			<div class="big" id="myBtn8">
+				<div class="small"><img src="img/050.png"/></div>
+				<div class="wenzi">
+				天蝎流星雨
+				</div>
+				<!-- 弹窗 -->
+				<div id="myModal8" class="modal">
+
+					<!-- 弹窗内容 -->
+					<div class="modal-content">
+						<div class="tutu">
+							<img src="img/050.png" />
+						</div>
+						<div class="zizi">VIP专属哦！亲~</div>
+						
+					</div>
+
+				</div>
+				<!--弹窗结束-->
+			</div>
+			<div class="big" id="myBtn9">
+				<div class="small"><img src="img/051.png"/></div>
+				<div class="wenzi">
+					双子流星雨
+				</div>
+				<!-- 弹窗 -->
+				<div id="myModal9" class="modal">
+
+					<!-- 弹窗内容 -->
+					<div class="modal-content">
+						<div class="tutu">
+							<img src="img/051.png" />
+						</div>
+						<div class="zizi">VIP专属哦！亲~</div>
+						
+					</div>
+
+				</div>
+				<!--弹窗结束-->
+			</div>
+			<div class="big" id="myBtn10">
+				<div class="small"><img src="img/052.png"/></div>
+				<div class="wenzi">
+					夏夜烟花
+				</div>
+				<!-- 弹窗 -->
+				<div id="myModal10" class="modal">
+
+					<!-- 弹窗内容 -->
+					<div class="modal-content">
+						<div class="tutu">
+							<img src="img/052.png" />
+						</div>
+						<div class="zizi">VIP专属哦！亲~</div>
+						
+					</div>
+
+				</div>
+				<!--弹窗结束-->
+			</div>
+			<div class="big" id="myBtn11">
+				<div class="small"><img src="img/053.png"/></div>
+				<div class="wenzi">
+					财源滚滚
+				</div>
+				<!-- 弹窗 -->
+				<div id="myModal11" class="modal">
+
+					<!-- 弹窗内容 -->
+					<div class="modal-content">
+						<div class="tutu">
+							<img src="img/053.png" />
+						</div>
+						<div class="zizi">VIP专属哦！亲~</div>
+						
+					</div>
+
+				</div>
+				<!--弹窗结束-->
+			</div>
+		
+
+		</div>
+		<!--主体结束-->
+
+		<script src="js/mui.min.js"></script>
+		<script type="text/javascript">
+			mui.init()
+			// 获取弹窗
+			var modal1 = document.getElementById('myModal1');
+			var modal2 = document.getElementById('myModal2');
+			var modal3 = document.getElementById('myModal3');
+			var modal4 = document.getElementById('myModal4');
+			var modal5 = document.getElementById('myModal5');
+			var modal6 = document.getElementById('myModal6');
+			var modal7 = document.getElementById('myModal7');
+			var modal8 = document.getElementById('myModal8');
+			var modal9 = document.getElementById('myModal9');
+			var modal10 = document.getElementById('myModal10');
+			var modal11 = document.getElementById('myModal11');
+
+			// 打开弹窗的按钮对象
+			var btn1 = document.getElementById("myBtn1");
+			var btn2 = document.getElementById("myBtn2");
+			var btn3 = document.getElementById("myBtn3");
+			var btn4 = document.getElementById("myBtn4");
+			var btn5 = document.getElementById("myBtn5");
+			var btn6 = document.getElementById("myBtn6");
+			var btn7 = document.getElementById("myBtn7");
+			var btn8 = document.getElementById("myBtn8");
+			var btn9 = document.getElementById("myBtn9");
+			var btn10 = document.getElementById("myBtn10");
+			var btn11= document.getElementById("myBtn11");
+
+			
+
+			// 点击按钮打开弹窗
+			btn1.onclick = function() {
+				modal1.style.display = "block";
+			}
+			btn2.onclick = function() {
+				modal2.style.display = "block";
+			}
+			btn3.onclick = function() {
+				modal3.style.display = "block";
+			}
+			btn4.onclick = function() {
+				modal4.style.display = "block";
+			}
+			btn5.onclick = function() {
+				modal5.style.display = "block";
+			}
+			btn6.onclick = function() {
+				modal6.style.display = "block";
+			}
+			btn7.onclick = function() {
+				modal7.style.display = "block";
+			}
+			btn8.onclick = function() {
+				modal8.style.display = "block";
+			}
+			btn9.onclick = function() {
+				modal9.style.display = "block";
+			}
+			btn10.onclick = function() {
+				modal10.style.display = "block";
+			}
+			btn11.onclick = function() {
+				modal11.style.display = "block";
+			}
+			
+			window.onclick = function(event) {
+				if(event.target == modal1) {
+					modal1.style.display = "none";
+				}
+				if(event.target == modal2) {
+					modal2.style.display = "none";
+				}
+				if(event.target == modal3) {
+					modal3.style.display = "none";
+				}
+				if(event.target == modal4) {
+					modal4.style.display = "none";
+				}
+				if(event.target == modal5) {
+					modal5.style.display = "none";
+				}
+				if(event.target == modal6) {
+					modal6.style.display = "none";
+				}
+				if(event.target == modal7) {
+					modal7.style.display = "none";
+				}
+				if(event.target == modal8) {
+					modal8.style.display = "none";
+				}
+				if(event.target == modal9) {
+					modal9.style.display = "none";
+				}
+				if(event.target == modal10) {
+					modal10.style.display = "none";
+				}
+				if(event.target == modal11) {
+					modal11.style.display = "none";
+				}
+				
+			}
+		</script>
+	</body>
+
+</html>

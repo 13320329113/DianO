@@ -1,0 +1,90 @@
+<!doctype html>
+<html>
+
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+		<meta name="viewport" content="width=device-width,initial-scale=1,minimum-scale=1,maximum-scale=1,user-scalable=no" />
+		<link href="css/mui.min.css" rel="stylesheet" />
+		<style type="text/css">
+			.mui-pull-left{
+				color: black;
+			}
+			P{
+				font-family: "微软雅黑";
+				font-size: 18px;
+				font-weight: 800;
+				text-align: center;
+				color: black;
+				height: 30px;
+				background-color: #F9F9F9;
+				line-height: 30px;
+				
+			}
+			.af{
+				width: auto;
+				height: 25px;
+			}
+			.bf{
+				margin-left: 10px;
+				
+				color: blue;
+			}
+			.cf{
+				font-weight: 700;
+			}
+			.mui-input-clear{
+				height: 150px;
+			}
+			#uploadheadImage{
+				border-radius: 30px;
+				background-color: cornflowerblue;
+			}
+		</style>
+	</head>
+
+	<body>
+		<a class="mui-action-back mui-icon mui-icon-left-nav mui-pull-left"></a><p>品类反馈</p>
+		<div class="af">
+			<span class="bf"><strong>|</strong></span> <span class="cf">问题描述</span>
+		</div>
+		<div class="row mui-input-row">
+				<textarea id='fquestion' class="mui-input-clear question" placeholder="请告诉我们你想要的品类~~"></textarea>
+			</div>
+		<div class="mui-row mui-content-padded">
+	     	<button type="button" class="mui-btn mui-btn-blue mui-btn-block" id="uploadheadImage">提交</button>
+	     </div>
+		<script src="js/mui.min.js"></script>
+		<script type="text/javascript">
+			var gallery = mui('.mui-slider');
+                gallery.slider({
+                interval:3000//自动轮播周期，若为0则不自动播放，默认为0；
+            });
+			mui.init()
+			document.getElementById("uploadheadImage").addEventListener("tap",function(){
+				var bb=document.getElementById("fquestion").value;
+				console.log(bb);
+		
+				mui.ajax("http://192.168.43.128:8080/myshop/JavaApi",{
+						data:{
+							rnum:"11",
+	                  		fkquestion: bb	
+						},
+						dataType:'json',//服务器返回json格式数据
+						type:'post',//HTTP请求类型
+						timeout:10000,//超时时间设置为10秒；
+						headers:{'Content-Type':'application/x-www-form-urlencoded'},
+						success:function(data){
+							mui.toast("提交成功!");
+							
+							console.log(JSON.stringify(data));
+						}
+				});
+
+			});
+
+
+		</script>
+	</body>
+
+</html>

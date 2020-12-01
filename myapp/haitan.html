@@ -1,0 +1,603 @@
+<!doctype html>
+<html>
+
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+		<meta name="viewport" content="width=device-width,initial-scale=1,minimum-scale=1,maximum-scale=1,user-scalable=no" />
+		<link href="css/mui.min.css" rel="stylesheet" />
+		<style type="text/css">
+			*{
+				margin: 0;
+				padding: 0;
+			}
+			body{
+				background-image: url(img/021.jpg);
+				background-attachment: fixed;
+				
+			}
+			
+			
+			.mui-action-back{
+				color: white;
+			}
+			.mui-bar{
+				background: none;
+				box-shadow: none;
+				
+			}
+			.mui-title{
+				color: white;
+			}
+			.top{
+				margin: 0 auto;
+				width: 330px;
+				height: 30px;
+				line-height: 30px;
+				background-color: purple;
+				margin-top: 50px;
+				border-radius: 30px;
+				margin-bottom: 50px;
+				position: relative;
+				/*animation: testscroll 10s infinite linear;*/
+				color: white;
+			}
+			@keyframes testscroll{
+				from{
+					 left: 300px;
+				}
+				to{
+					 left:-300px;
+				}
+			}
+			
+			.left{
+				width: 130px;
+				/*background-color: firebrick;*/
+				float: left;
+				margin-left: 20px ;
+			}
+			.one{
+				width: 130px;
+				height: 25px;
+				background-color: white;
+				margin-bottom: 10px;
+				padding-top: 3px;
+				border-radius: 20px;
+			}
+			.two{
+				color: brown;
+				width: 130px;
+				height: 50px;
+				background-color: white;
+				margin-bottom: 10px;
+				padding-top: 8px;
+				border-radius: 20px;
+			}
+			.three{
+				color: brown;
+				width: 130px;
+				height: 25px;
+				background-color: white;
+				margin-bottom: 10px;
+				border-radius: 20px;
+				line-height: 25px;
+				font-size: 13px;
+			}
+			.right{
+				
+				width: 130px;
+				height: 180px;
+				/*background-color: blanchedalmond;*/
+				float: right;
+				margin-right: 20px;
+			}
+			.yuan{
+				width: 50px;
+				height: 50px;
+				background-color: white;
+				border-radius: 25px;
+				margin-bottom: 10px;
+				margin-left: 80px;
+			}
+			.mokuai{
+				width: 100%;
+				height: 600px;
+				/*background-color: navajowhite;*/
+				margin-top: 250px;
+				text-align: center;
+				
+			}
+			.a1{
+				float: left;
+				margin-left: 16px;
+				margin-bottom: 20px;
+				width: 110px;
+				height: 150px;
+				background-color: dodgerblue;
+				/* box-shadow: 0px 0px 10px dodgerblue;*/
+				border-radius: 15px;
+				/*opacity: 0.9;*/
+				position: relative;
+			}
+			@-webkit-keyframes myfirst{
+				from{width: 50px;}
+				to{width: 60px;}
+			}
+			
+			.dibu{
+				margin: 0 auto;
+				width: 90px;
+				height: 25px;
+				line-height: 25px;
+				background-color: lightcoral;
+				border-radius: 20px;
+				font-size: 12px;
+				margin-top:8px ;
+			}
+			
+			.dibu:hover{
+				cursor: pointer;
+			}
+			
+			/*进度条*/
+			.outerbox{
+				width: 90px;
+				height: 10px;
+				background-color: gray;
+				float: left;
+				position: absolute;
+				bottom: 20px;
+				left: 10px;
+				border-radius: 10px;
+				display: none;
+				
+			}
+			#innerbox{
+				width: 1px;
+				height: 10px;
+				background-color: white;
+				border-radius: 10px;
+
+			}
+			
+			@-webkit-keyframes donghua{
+				from{width: 1px;}
+				to{width: 90px;}
+			}
+			@keyframes donghua{
+				from{width: 1px;}
+				to{width: 90px;}
+			}
+			.picon{
+				animation: donghua;
+				animation-duration:5s;
+				animation-fill-mode: forwards;
+				animation-iteration-count: 1;
+			}
+			.a1 img{
+				width: 50px;
+			}
+			
+			
+			.b1{
+				-webkit-animation: myfirst 0.5s linear 2s infinite alternate;
+			}
+			.footer{
+				width: 100%;
+				height: 70px;
+				position: fixed;
+				bottom: 0px;
+				opacity: 0.7;
+				background-image: url(img/024.gif);
+				text-align: center;
+			}
+			
+			.footer img{
+				margin-bottom: 5px;
+				margin-top: 5px;
+				
+			}
+			.img1{
+				margin-left: 18px;
+				
+			}
+			.img2{
+				width: 50px;
+				border-radius: 20px;
+			}
+			.wz{
+				/*background-color: gold;*/
+				float: right;
+				margin-top: 5px;
+				margin-right: 8px;
+			}
+			.yuan img{
+				padding-left: 1px;
+				border-radius: 20px;
+			}
+			.shangbu{
+				color: white;
+				height: 40px;
+				line-height: 40px;
+				margin-top: 10px;
+				/*background-color: navajowhite;*/
+			}
+			
+			#anniu{
+				width: 40px;
+				height: 15px;
+				background-color: hotpink;
+				float: right;
+				margin-top: 5px;
+				margin-right: 15px;
+				border-radius: 20px;
+				position: relative;
+			}
+			
+			#zuo{
+				margin-left: 10px;
+			}
+			#xan{
+				width: 15px;
+				height: 15px;
+				background-color: chartreuse;
+				border-radius: 7.5px;
+				position: absolute;
+			}
+			
+		</style>
+	</head>
+
+	<body>
+		<header class="mui-bar mui-bar-nav">
+		    <a class="mui-action-back mui-icon mui-icon-left-nav mui-pull-left"></a>
+		    <h1 class="mui-title">我的海滩</h1>
+		</header>
+		<div class="top">
+				\神棍在成就商城中成功兑换Amy体验时长
+			</div>
+			<div class="left">
+				 <div class="one">
+				 	<img class="img1" src="img/019.png"/>
+				 	78
+				 	<img class="img1" src="img/020.png"/>
+				 	0
+			     </div>
+				 <div class="two">
+				 	<img class="img2" src="image/6239936_092702973000_2.jpg"/>
+				 	<span class="wz">
+				 		海滩Lv0
+				 	</span>
+				 </div>
+				 <div class="three">
+				 	<span id="zuo">
+				 		关闭提醒
+				 	</span>
+				 	<div id="anniu">
+				 		<div id="xan">
+				 			
+				 		</div>
+				 	</div>
+				 </div>
+			</div>
+			<div class="right">
+				<div class="yuan">
+					<img src="img/022.png"/>
+				</div>
+				<div class="yuan">
+					<img src="img/023.png"/>
+				</div>
+				<div class="yuan">
+					<img src="img/024.png"/>
+				</div>
+			</div>
+		<div class="mokuai">
+			<div class="a1">
+				<div class="shangbu">
+					海星
+				</div>
+				<img class="b1" src="img/025.png"/>
+				<div class="dibu">
+					制作完成
+				</div>
+			</div>
+			<div class="a1" id="c2">
+				<div class="shangbu">
+					海草
+				</div>
+				<img src="img/026.png"/>
+				<div class="dibu" id="mydibu2">
+					解锁
+				</div>
+				<div class="outerbox">
+					<div id="innerbox">
+						
+					</div>
+				</div>
+				
+			</div>
+			<div class="a1" id="c3">
+				<div class="shangbu">
+					海螺
+				</div>
+				<img src="img/027.png"/>
+				<div class="dibu" id="mydibu3">
+					解锁
+				</div>
+				<div class="outerbox">
+					<div id="innerbox">
+						
+					</div>
+				</div>
+			</div>
+			<div class="a1" id="c4">
+				<div class="shangbu">
+					比基尼
+				</div>
+				<img src="img/028.png"/>
+				<div class="dibu" id="mydibu4">
+					解锁
+				</div>
+				<div class="outerbox">
+					<div id="innerbox">
+						
+					</div>
+				</div>
+			</div>
+			<div class="a1" id="c5">
+				<div class="shangbu">
+					遮阳伞
+				</div>
+				<img src="img/029.png"/>
+				<div class="dibu" id="mydibu5">
+					解锁
+				</div>
+				<div class="outerbox">
+					<div id="innerbox">
+						
+					</div>
+				</div>
+			</div>
+			<div class="a1" id="c6">
+				<div class="shangbu">
+					冲浪板
+				</div>
+				<img src="img/030.png"/>
+				<div class="dibu" id="mydibu6">
+					解锁
+				</div>
+				<div class="outerbox">
+					<div id="innerbox">
+						
+					</div>
+				</div>
+			</div>
+			<div class="a1" id="c7">
+				<div class="shangbu">
+					珊瑚
+				</div>
+				<img src="img/031.png"/>
+				<div class="dibu" id="mydibu7">
+					解锁
+				</div>
+				<div class="outerbox">
+					<div id="innerbox">
+						
+					</div>
+				</div>
+			</div>
+			<div class="a1" id="c8">
+				<div class="shangbu">
+					海豚
+				</div>
+				<img src="img/032.png"/>
+				<div class="dibu" id="mydibu8">
+					解锁
+				</div>
+				<div class="outerbox">
+					<div id="innerbox">
+						
+					</div>
+				</div>
+			</div>
+			<div class="a1" id="c9">
+				<div class="shangbu">
+					企鹅
+				</div>
+				<img src="img/033.png"/>
+				<div class="dibu" id="mydibu9">
+					解锁
+				</div>
+				<div class="outerbox">
+					<div id="innerbox">
+						
+					</div>
+				</div>
+			</div>
+		</div>
+		<div class="footer">
+			<img src="img/034.png"/>
+			<div class="js">
+				解锁全部物品，升级海滩开启新功能
+			</div>
+			
+		</div>
+		<script src="js/mui.min.js"></script>
+		<script src="js/jquery-1.11.0.min.js" type="text/javascript" charset="utf-8"></script>
+		<script type="text/javascript">
+			mui.init()
+			var oBox=document.getElementById("anniu");
+			var oBtn=document.getElementById("xan");
+			var nLeft=oBox.offsetWidth-oBtn.offsetWidth;
+			var text1=document.getElementsByClassName("zuo");
+			
+			oBox.onclick=function(){
+				document.getElementsById("zuo").style.color="blue";
+			}
+			oBox.onclick=function(){
+				var moveLeft=oBtn.offsetLeft;
+				var timer=null;
+				timer=setInterval(function(){
+					
+					moveLeft+=2;
+					oBtn.style.left=moveLeft+'px';
+					if(moveLeft>=nLeft)
+					{
+						clearInterval(timer);
+					}
+				},10)
+				timer2=setInterval(function(){
+					moveLeft-=2;
+					oBtn.style.left=moveLeft+'px';
+					if(moveLeft<=0)
+					{
+						clearInterval(timer2);
+					}
+					
+				},10)
+			}
+			
+			//进度条
+			
+			$("#c2>.dibu").click(function(){
+				 $("#c2>.outerbox").show();
+				 $(this).hide();
+				if($("#c2>.outerbox>#innerbox").hasClass('picon')){
+					$("#c2>.outerbox>#innerbox").removeClass('picon');
+				}
+				$("#c2>.outerbox>#innerbox").addClass("picon");
+				setTimeout(function(){
+					
+					$("#c2>.dibu").show();
+					$("#c2>.outerbox").hide();
+					var txt=$("#c2>.outerbox")
+					document.getElementById("mydibu2").innerHTML="制作完成";
+					$("#c2>img").addClass("b1");
+				},5000)
+				
+			});
+			$("#c3>.dibu").click(function(){
+				 $("#c3>.outerbox").show();
+				 $(this).hide();
+				if($("#c3>.outerbox>#innerbox").hasClass('picon')){
+					$("#c3>.outerbox>#innerbox").removeClass('picon');
+				}
+				$("#c3>.outerbox>#innerbox").addClass("picon");
+				setTimeout(function(){
+					
+					$("#c3>.dibu").show();
+					$("#c3>.outerbox").hide();
+					var txt=$("#c3>.outerbox")
+					document.getElementById("mydibu3").innerHTML="制作完成";
+					$("#c3>img").addClass("b1");
+				},5000)
+				
+			});
+			$("#c4>.dibu").click(function(){
+				 $("#c4>.outerbox").show();
+				 $(this).hide();
+				if($("#c4>.outerbox>#innerbox").hasClass('picon')){
+					$("#c4>.outerbox>#innerbox").removeClass('picon');
+				}
+				$("#c4>.outerbox>#innerbox").addClass("picon");
+				setTimeout(function(){
+					
+					$("#c4>.dibu").show();
+					$("#c4>.outerbox").hide();
+					var txt=$("#c4>.outerbox")
+					document.getElementById("mydibu4").innerHTML="制作完成";
+					$("#c4>img").addClass("b1");
+				},5000)
+				
+			});
+			$("#c5>.dibu").click(function(){
+				 $("#c5>.outerbox").show();
+				 $(this).hide();
+				if($("#c5>.outerbox>#innerbox").hasClass('picon')){
+					$("#c5>.outerbox>#innerbox").removeClass('picon');
+				}
+				$("#c5>.outerbox>#innerbox").addClass("picon");
+				setTimeout(function(){
+					
+					$("#c5>.dibu").show();
+					$("#c5>.outerbox").hide();
+					var txt=$("#c5>.outerbox")
+					document.getElementById("mydibu5").innerHTML="制作完成";
+					$("#c5>img").addClass("b1");
+				},5000)
+				
+			});
+			$("#c6>.dibu").click(function(){
+				 $("#c6>.outerbox").show();
+				 $(this).hide();
+				if($("#c6>.outerbox>#innerbox").hasClass('picon')){
+					$("#c6>.outerbox>#innerbox").removeClass('picon');
+				}
+				$("#c6>.outerbox>#innerbox").addClass("picon");
+				setTimeout(function(){
+					
+					$("#c6>.dibu").show();
+					$("#c6>.outerbox").hide();
+					var txt=$("#c6>.outerbox")
+					document.getElementById("mydibu6").innerHTML="制作完成";
+					$("#c6>img").addClass("b1");
+				},5000)
+				
+			});
+			$("#c7>.dibu").click(function(){
+				 $("#c7>.outerbox").show();
+				 $(this).hide();
+				if($("#c7>.outerbox>#innerbox").hasClass('picon')){
+					$("#c7>.outerbox>#innerbox").removeClass('picon');
+				}
+				$("#c7>.outerbox>#innerbox").addClass("picon");
+				setTimeout(function(){
+					
+					$("#c7>.dibu").show();
+					$("#c7>.outerbox").hide();
+					var txt=$("#c7>.outerbox")
+					document.getElementById("mydibu7").innerHTML="制作完成";
+					$("#c7>img").addClass("b1");
+				},5000)
+				
+			});
+			
+			$("#c8>.dibu").click(function(){
+				 $("#c8>.outerbox").show();
+				 $(this).hide();
+				if($("#c8>.outerbox>#innerbox").hasClass('picon')){
+					$("#c8>.outerbox>#innerbox").removeClass('picon');
+				}
+				$("#c8>.outerbox>#innerbox").addClass("picon");
+				setTimeout(function(){
+					
+					$("#c8>.dibu").show();
+					$("#c8>.outerbox").hide();
+					var txt=$("#c8>.outerbox")
+					document.getElementById("mydibu8").innerHTML="制作完成";
+					$("#c8>img").addClass("b1");
+				},5000)
+				
+			});
+			$("#c9>.dibu").click(function(){
+				 $("#c9>.outerbox").show();
+				 $(this).hide();
+				if($("#c9>.outerbox>#innerbox").hasClass('picon')){
+					$("#c9>.outerbox>#innerbox").removeClass('picon');
+				}
+				$("#c9>.outerbox>#innerbox").addClass("picon");
+				setTimeout(function(){
+					
+					$("#c9>.dibu").show();
+					$("#c9>.outerbox").hide();
+					var txt=$("#c9>.outerbox")
+					document.getElementById("mydibu9").innerHTML="制作完成";
+					$("#c9>img").addClass("b1");
+				},5000)
+				
+			});
+		</script>
+	</body>
+
+</html>

@@ -1,0 +1,486 @@
+<!doctype html>
+<html>
+
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+		<meta name="viewport" content="width=device-width,initial-scale=1,minimum-scale=1,maximum-scale=1,user-scalable=no" />
+		<link href="css/mui.min.css" rel="stylesheet" />
+		<style type="text/css">
+			* {
+				margin: 0;
+				padding: 0;
+			}
+			
+			html,
+			body {
+				width: 100%;
+				height: 100%;
+			}
+			
+			.mui-action-back{
+				color: white;
+			}
+			.mui-bar{
+				background: none;
+				box-shadow: none;
+				
+			}
+			.mui-title{
+				color: white;
+			}
+			
+			#top {
+				width: 100%;
+				height: 40%;
+				background-color: #00BFFF;
+				position: relative;
+				background-image: url(img/009.png);
+				opacity: 0.9;
+				margin-bottom: 60px;
+			}
+			
+			.VIP {
+				position: absolute;
+				width: 30%;
+				height: 50%;
+				left: 35%;
+				top: 27%;
+				position: relative;
+			}
+			
+			.VIP img {
+				position: absolute;
+				width: 90%;
+				left: 5%;
+			}
+			
+			.wz {
+				position: absolute;
+				width: 100%;
+				top: 80%;
+				font-size: 20px;
+				color: whitesmoke;
+				text-align: center;
+			}
+			
+			.mokuai {
+				width: 96%;
+				position: absolute;
+				left: 2%;
+				top: 82%;
+				height: 35%;
+				background-image: url(img/018.png);
+				border-radius: 10px;
+				margin-bottom: 20px;
+				opacity: 0.9;
+			}
+			
+			.zuo {
+				float: left;
+				position: relative;
+				width: 20%;
+				height: 80%;
+				left: 3%;
+				top: 10%;
+			}
+			
+			.zuo img {
+				width: 100%;
+				height: 100%;
+				border-radius: 10px;
+			}
+			
+			.you {
+				position: relative;
+				width: 70%;
+				height: 80%;
+				top: 10%;
+				right: 2.5%;
+				float: right;
+			}
+			
+			.nc {
+				line-height: 35px;
+				color: white;
+			}
+			
+			.zi {
+				line-height: 35px;
+				color: white;
+			}
+			
+			.jdt {
+				height: 8px;
+				background-color: #00BFFF;
+				border-radius: 10px;
+			}
+			
+			.shengji {
+				width: 96%;
+				height: 70%;
+				background-color: white;
+				border-radius: 10px;
+				margin: 0 auto;
+			}
+			
+			.pp {
+				font-size: 16px;
+				font-family: "微软雅黑";
+				color: #1E90FF;
+				text-align: center;
+				height: 80px;
+				line-height: 80px;
+			}
+			
+			.inner {
+				width: calc(25% - 15px);
+				height: 90px;
+				float: left;
+				border-radius: 10px;
+				margin-left: 50px;
+				margin-bottom: 50px;
+				text-align: center;
+			}
+			
+			.inner:nth-child(3n+1) {
+				margin-right: 10px;
+				width: calc(25% - 20px);
+			}
+			
+			.inner:nth-child(3n-1) {
+				margin-left: 20px;
+			}
+			
+			.xiao {
+				font-size: 12px;
+				color: darkgray;
+			}
+			
+			.da {
+				font-size: 14px;
+			}
+			
+			.modal {
+				display: none;
+				/* 默认隐藏 */
+				position: fixed;
+				/* 固定定位 */
+				z-index: 1;
+				/* 设置在顶层 */
+				left: 0;
+				top: 0;
+				width: 100%;
+				height: 100%;
+				overflow: auto;
+				background-color: rgb(0, 0, 0);
+				background-color: rgba(0, 0, 0, 0.4);
+			}
+			/* 弹窗内容 */
+			
+			.modal-content {
+				background-color: white;
+				margin: 60% auto;
+				padding: 20px;
+				border: 1px solid #888;
+				width: 80%;
+				border-radius: 20px;
+			}
+			
+			.tutu img{
+				
+				margin-bottom: 20px;
+				width: 80px;
+				height: 80px;
+			}
+			.zizi{
+				font-size: 20px;
+				margin-bottom: 20px;
+			}
+		</style>
+	</head>
+
+	<body>
+		<header class="mui-bar mui-bar-nav">
+		    <a class="mui-action-back mui-icon mui-icon-left-nav mui-pull-left"></a>
+		    <h1 class="mui-title">会员中心</h1>
+		</header>
+		<div id="top">
+			<div class="VIP">
+				<img src="img/007.png" />
+				<div class="wz">VIP0</div>
+			</div>
+			<div class="mokuai">
+				<div class="zuo">
+					<img src="image/6239936_092702973000_2.jpg" />
+				</div>
+
+				<div class="you">
+					<div class="nc">
+						武林萌主
+					</div>
+					<div class="jdt">
+
+					</div>
+					<div class="zi">
+						距离升级至VIP还差100经验值哦！
+					</div>
+				</div>
+			</div>
+
+		</div>
+		<div class="shengji">
+
+			<div class="pp">升级VIP等级，开启更多特权</div>
+			<div class="inner" id="myBtn1">
+				<img src="img/011.png" />
+				<div class="da">
+					VIP徽章
+				</div>
+				<div class="xiao">
+					VIP1
+				</div>
+				
+				<!-- 弹窗 -->
+				<div id="myModal1" class="modal">
+
+					<!-- 弹窗内容 -->
+					<div class="modal-content">
+						<div class="tutu">
+							<img src="img/011.png" />
+						</div>
+						<div class="zizi">VIP徽章</div>
+						<p>VIP会员专享徽章，彰显你与众不同的身份</p>
+						<p>升级到VIP1就可以获得此特权</p>
+					</div>
+
+				</div>
+				<!--弹窗结束-->
+			</div>
+			<div class="inner" id="myBtn2">
+				<img src="img/012.png" />
+				<div class="da">
+					隐身浏览
+				</div>
+				<div class="xiao">
+					VIP3
+				</div>
+				
+				<!-- 弹窗 -->
+				<div id="myModal2" class="modal">
+
+					<!-- 弹窗内容 -->
+					<div class="modal-content">
+						<div class="tutu">
+							<img src="img/012.png" />
+						</div>
+						<div class="zizi">隐身浏览</div>
+						<p>在访问他人的个人主页和技能页时不会留下足迹</p>
+						<p>升级到VIP3就可以获得此特权</p>
+					</div>
+
+				</div>
+				<!--弹窗结束-->
+				
+			</div>
+			<div class="inner" id="myBtn3">
+				<img src="img/013.png" />
+				<div class="da">
+					VIP福利
+				</div>
+				<div class="xiao">
+					VIP4
+				</div>
+				<!-- 弹窗 -->
+				<div id="myModal3" class="modal">
+
+					<!-- 弹窗内容 -->
+					<div class="modal-content">
+						
+						<div class="tutu">
+							<img src="img/013.png" />
+						</div>
+						<div class="zizi">VIP福利</div>
+						<p>每月可以领取会员专享超值优惠券</p>
+						
+					</div>
+
+				</div>
+				<!--弹窗结束-->
+			</div>
+			<div class="inner" id="myBtn4">
+				<img src="img/014.png" />
+				<div class="da">
+					生日祝福
+				</div>
+				<div class="xiao">
+					VIP4
+				</div>
+				
+				<!-- 弹窗 -->
+				<div id="myModal4" class="modal">
+
+					<!-- 弹窗内容 -->
+					<div class="modal-content">
+						<div class="tutu">
+							<img src="img/014.png" />
+						</div>
+						<div class="zizi">生日祝福</div>
+						<p>会员生日当天，可选择任意线上歌手大神，聆听专属您的生日歌</p>
+						<p>升级到VIP4就可以获得此特权</p>
+					</div>
+
+				</div>
+				<!--弹窗结束-->
+				
+			</div>
+			<div class="inner" id="myBtn5">
+				<img src="img/015.png" />
+				<div class="da">
+					专属客服
+				</div>
+				<div class="xiao">
+					VIP4
+				</div>
+				<!-- 弹窗 -->
+				<div id="myModal5" class="modal">
+
+					<!-- 弹窗内容 -->
+					<div class="modal-content">
+						<div class="tutu">
+							<img src="img/015.png" />
+						</div>
+						<div class="zizi">专属客服</div>
+						<p>VIP专属通道优先处理纠纷，第一时间解决问题，保障会员权益</p>
+						<p>升级到VIP4就可以获得此特权</p>
+					</div>
+
+				</div>
+				<!--弹窗结束-->
+			</div>
+			<div class="inner" id="myBtn6">
+				<img src="img/016.png" />
+				<div class="da">
+					昵称色彩
+				</div>
+				<div class="xiao">
+					VIP6
+				</div>
+				<!-- 弹窗 -->
+				<div id="myModal6" class="modal">
+
+					<!-- 弹窗内容 -->
+					<div class="modal-content">
+						<div class="tutu">
+							<img src="img/016.png" />
+						</div>
+						<div class="zizi">昵称色彩</div>
+						<p>个人昵称的字体颜色将会随着VIP等级的不同显示不同颜色，彰显尊贵身份特权</p>
+						<p>升级到VIP6就可以获得此特权</p>
+					</div>
+
+				</div>
+				<!--弹窗结束-->
+			</div>
+			<div class="inner" id="myBtn7">
+				<img src="img/017.png" />
+				<div class="da">
+					动态头像
+				</div>
+				<div class="xiao">
+					VIP9
+				</div>
+				<!-- 弹窗 -->
+				<div id="myModal7" class="modal">
+
+					<!-- 弹窗内容 -->
+					<div class="modal-content">
+						<div class="tutu">
+							<img src="img/017.png" />
+						</div>
+						<div class="zizi">动态头像</div>
+						<p>可联系客服上传不大于40帧的GIF图片作为头像</p>
+						<p>升级到VIP9就可以获得此特权</p>
+					</div>
+
+				</div>
+				<!--弹窗结束-->
+			</div>
+		</div>
+		<script src="js/mui.min.js"></script>
+		<script type="text/javascript">
+			mui.init()
+			// 获取弹窗
+			var modal1 = document.getElementById('myModal1');
+			var modal2 = document.getElementById('myModal2');
+			var modal3 = document.getElementById('myModal3');
+			var modal4 = document.getElementById('myModal4');
+			var modal5 = document.getElementById('myModal5');
+			var modal6 = document.getElementById('myModal6');
+			var modal7 = document.getElementById('myModal7');
+
+			// 打开弹窗的按钮对象
+			var btn1 = document.getElementById("myBtn1");
+			var btn2 = document.getElementById("myBtn2");
+			var btn3 = document.getElementById("myBtn3");
+			var btn4 = document.getElementById("myBtn4");
+			var btn5 = document.getElementById("myBtn5");
+			var btn6 = document.getElementById("myBtn6");
+			var btn7 = document.getElementById("myBtn7");
+
+			
+
+			// 点击按钮打开弹窗
+			btn1.onclick = function() {
+				modal1.style.display = "block";
+			}
+			btn2.onclick = function() {
+				modal2.style.display = "block";
+			}
+			btn3.onclick = function() {
+				modal3.style.display = "block";
+			}
+			btn4.onclick = function() {
+				modal4.style.display = "block";
+			}
+			btn5.onclick = function() {
+				modal5.style.display = "block";
+			}
+			btn6.onclick = function() {
+				modal6.style.display = "block";
+			}
+			btn7.onclick = function() {
+				modal7.style.display = "block";
+			}
+
+			
+			window.onclick = function(event) {
+				if(event.target == modal1) {
+					modal1.style.display = "none";
+				}
+				if(event.target == modal2) {
+					modal2.style.display = "none";
+				}
+				if(event.target == modal3) {
+					modal3.style.display = "none";
+				}
+				if(event.target == modal4) {
+					modal4.style.display = "none";
+				}
+				if(event.target == modal5) {
+					modal5.style.display = "none";
+				}
+				if(event.target == modal6) {
+					modal6.style.display = "none";
+				}
+				if(event.target == modal7) {
+					modal7.style.display = "none";
+				}
+			}
+			
+			
+			
+		</script>
+	</body>
+
+</html>
